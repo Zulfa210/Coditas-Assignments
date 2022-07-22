@@ -9,10 +9,10 @@ public class Q8_Star_Pattern {
         {
             for (int j=0; j<9; j++) //the first row has maximum 9 columns
             {
-                if(j>=i && j<=8-i)  //this will print stars from j =
+                if(j>=i && j<=8-i)  //this will print stars from j = i to j = 8-i
                 System.out.print("*");
                 else
-                    System.out.print(" ");//for j = 0 and j= last index, space is printed
+                    System.out.print(" ");//for j = 0 and j= last index-1, space is printed
             }
             System.out.println("");
 
