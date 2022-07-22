@@ -25,3 +25,9 @@ public class Q8_Star_Pattern {
 
     }
 }
+
+//Output: *********
+//         *******
+//          *****
+//           ***
+//            *    
