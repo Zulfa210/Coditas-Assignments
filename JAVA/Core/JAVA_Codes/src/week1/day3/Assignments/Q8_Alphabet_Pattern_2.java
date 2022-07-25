@@ -14,7 +14,7 @@ public class Q8_Alphabet_Pattern_2 {
         for (int i = 5; i >= 0; i--) {
             int alphabet = 65;
             for (int j = 0; j <= i - 1; j++) {
-                System.out.print((char) (alphabet + j) + " ");//printing alphabets from {A to F} to A
+                System.out.print((char) (alphabet + j) + " ");//printing alphabets from {A to E} to A
             }
             System.out.println();
         }
