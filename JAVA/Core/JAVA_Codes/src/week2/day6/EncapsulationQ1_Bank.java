@@ -111,6 +111,19 @@ public class EncapsulationQ1_Bank {
         Bank bank1 = new Bank("HDFC","Pune","Bund Garden", "HDFC00262");
         bank1.openAccount();
         bank1.deposit();
+        bank1.withdrawal();
+
     }
 
 }
+
+//output
+//Enter Account No: 783648
+//Enter Account type: Salary
+//Enter Name: Zulfa
+//Enter Balance: 6778
+//Enter the amount you want to deposit:
+//1222
+//Enter the amount for withdrawal:
+//9877
+//Your balance is less than 9877 Try Again...!!
