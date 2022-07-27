@@ -1,11 +1,11 @@
 package week2.day6;
-//Q3)Copy one array into the another array,using in-built functionality
-//there are many methods to copy one array into another array
-//1. Using clone() method
-//2. Using arraycopy() method of system class
-//3. Using copyOf() method of Arrays class
-//4. Using copyOfRange() method of Arrays class
-
+/**Q3)Copy one array into the another array,using in-built functionality
+there are many methods to copy one array into another array
+1. Using clone() method
+2. Using arraycopy() method of system class
+3. Using copyOf() method of Arrays class
+4. Using copyOfRange() method of Arrays class
+*/
 import java.util.*;
 
 class ArrayCopy{

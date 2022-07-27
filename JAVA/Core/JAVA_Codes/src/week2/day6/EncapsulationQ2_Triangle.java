@@ -26,6 +26,9 @@ class areaOfTriangle{
         area = length * breadth;
         return area;
     }
+    public static void setArea(double area){
+        areaOfTriangle.area = area;
+    }
 
 }
 
