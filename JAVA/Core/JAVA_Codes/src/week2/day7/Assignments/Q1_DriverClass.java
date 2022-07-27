@@ -116,7 +116,7 @@ class TestEmployee{
     }
 }
 
-public class Q1_WageEmployee {
+public class Q1_DriverClass {
     public static void main(String[] args) {
 
         TestEmployee testEmployee = new TestEmployee();
