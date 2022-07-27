@@ -11,8 +11,6 @@ class Employee{
 
     int employee_id;
     String employeeName;
-    String gender;
-
 
     Employee(int id, String name){
         this.employee_id= id;
@@ -52,7 +50,9 @@ class WageEmployee extends Employee{
 
 
 }
-
+/*2. Create SalesPerson class extending WageEmployee with attributes as sales(int) and commission (int)
+Override the ComputeSalary() in Salesperson class and print the salary and details of SalesPerson
+*/
 class Salesperson extends WageEmployee{
 
     int sales;
@@ -72,12 +72,17 @@ class Salesperson extends WageEmployee{
     }
 
 }
+/*3 Create Manager class extending Employee class with attributes as fixed salary(int) and
+incentives(int) and method computeSalary() to calculate the salary of Manager Print the salary and details of Manager
+ */
+
 class Manager extends Employee {
 
     int fixed_salary;
     int incentives;
 
     Manager(int id, String name, int fixed_salary, int incentives) {
+        super(id, name);
         this.fixed_salary = fixed_salary;
         this.incentives = incentives;
     }
@@ -89,17 +94,25 @@ class Manager extends Employee {
     }
 }
 
+/*4. Write a TestEmployee class to print the details of all types of employees (use array[] of Employee class)
+creating a driver class to print all details
+* */
 class TestEmployee{
 
     public void displayEmployee(){
-        Employee employee = new WageEmployee(212, "Zulfa", 8, 1000);
+        //object of wageEmployee class
+        Employee employee = new WageEmployee(211, "Zulfa", 8, 1000);
         employee.computeSalary();
 
-        Employee employee2 = new Manager(211, "Ram", 10000, 1000);
-        employee.computeSalary();
-
+        //object of salesperson class
         Employee employee1 = new Salesperson(213, "Priya", 8, 1000, 2300, 1999);
         employee1.computeSalary();
+
+        //object of manager class
+        Employee employee2 = new Manager(212, "Ram", 10000, 1000);
+        employee2.computeSalary();
+
+
     }
 }
 
