@@ -1,5 +1,7 @@
 package week2.day7.Assignments;
 
+import java.util.Scanner;
+
 /**
  *Create class WageEmployee extending Employee class with attributes as hrs (int)and rate(int) and
  * method computeSalary() to calculate the salary.
@@ -36,7 +38,17 @@ class WageEmployee extends Employee{
 
     int hrs;
     int rate;
-
+int salary;
+    @Override
+    public String toString() {
+        return "WageEmployee{" +
+                ", employee_id=" + employee_id +
+                ", employeeName='" + employeeName + '\'' +
+                ", hrs=" + hrs +
+                ", rate=" + rate +
+                ", salary=" + salary +
+                '}';
+    }
 
     WageEmployee(int id, String name, int hrs, int rate){
         super(id, name);
@@ -46,10 +58,7 @@ class WageEmployee extends Employee{
     WageEmployee(){
     }
     public void computeSalary(){
-        System.out.println("------------------------------------------------------");
-        System.out.println(super.toString());
-        int salary = hrs * rate;
-        System.out.println("Salary of WageEmployee is " + salary);
+        salary = hrs * rate;
     }
 
 
@@ -61,30 +70,49 @@ class Salesperson extends WageEmployee{
 
     int sales;
     int commission;
-
+int salary;
     Salesperson(int id, String n, int hrs, int rate, int sales, int commission){
         super(id, n, hrs, rate);
         this.sales = sales;
         this.commission = commission;
     }
     public void computeSalary(){
-
-        System.out.println("------------------------------------------------------");
-        System.out.println(super.toString());
-        int salary  = sales + commission;
-        System.out.println("Salary of Salesperson is " + salary);
+        salary  = salary + (sales * commission);
 
     }
 
+    @Override
+    public String toString() {
+        return "Salesperson{" +
+                ", employee_id=" + employee_id +
+                ", employeeName='" + employeeName + '\'' +
+                ", sales=" + sales +
+                ", commission=" + commission +
+                ", hrs=" + hrs +
+                ", rate=" + rate +
+                ", salary=" + salary +
+                '}';
+    }
 }
 /*3 Create Manager class extending Employee class with attributes as fixed salary(int) and
 incentives(int) and method computeSalary() to calculate the salary of Manager Print the salary and details of Manager
  */
 
 class Manager extends Employee {
+    @Override
+    public String toString() {
+        return "Manager{" +
+                ", employee_id=" + employee_id +
+                ", employeeName='" + employeeName + '\'' +
+                ", fixed_salary=" + fixed_salary +
+                ", incentives=" + incentives +
+                ", salary=" + salary +
+                '}';
+    }
 
     int fixed_salary;
     int incentives;
+    int salary;
 
     Manager(int id, String name, int fixed_salary, int incentives) {
         super(id, name);
@@ -93,10 +121,7 @@ class Manager extends Employee {
     }
 
     public void computeSalary() {
-        System.out.println("------------------------------------------------------");
-        System.out.println(super.toString());
-        int salary = fixed_salary + incentives;
-        System.out.println("Salary of Manager is " + salary);
+        salary = fixed_salary + incentives;
     }
 }
 
@@ -106,19 +131,35 @@ creating a driver class to print all details
 class TestEmployee{
 
     public void displayEmployee(){
-        //object of wageEmployee class
-        Employee employee = new WageEmployee(211, "Zulfa", 8, 1000);
-        employee.computeSalary();
 
-        //object of salesperson class
-        Employee employee1 = new Salesperson(213, "Zaid", 8, 1000, 2300, 1999);
+        Employee employee[]=new Employee[3];
+        //object of wageEmployee class
+        Employee employee1 = new WageEmployee(211, "Zulfa", 8, 1000);
         employee1.computeSalary();
 
-        //object of manager class
-        Employee employee2 = new Manager(212, "Ram", 10000, 1000);
+        //object of salesperson class
+        Employee employee2 = new Salesperson(213, "Zaid", 8, 1000, 2300, 1999);
         employee2.computeSalary();
 
+        //object of manager class
+        Employee employee3 = new Manager(212, "Ram", 10000, 1000);
+        employee3.computeSalary();
 
+        employee[0] = employee1;
+        employee[1] = employee2;
+        employee[2] = employee3;
+
+
+        new TestEmployee().displayEmployeeDetail(employee);
+    }
+
+    public void displayEmployeeDetail(Employee[] e)
+    {
+        for (int i=0;i<e.length;i++)
+        {
+            System.out.println("========================Employee "+(i+1)+" Details======================");
+            System.out.println(e[i]);
+        }
     }
 }
 
@@ -133,15 +174,14 @@ public class Q1_DriverClass {
 }
 /*Output:
 
-------------------------------------------------------
-Employee{employee_id=211, employeeName='Zulfa'}
-Salary of WageEmployee is 8000
-------------------------------------------------------
-Employee{employee_id=213, employeeName='Zaid'}
-Salary of Salesperson is 4299
-------------------------------------------------------
-Employee{employee_id=212, employeeName='Ram'}
-Salary of Manager is 11000
+========================Employee 1 Details======================
+WageEmployee{, employee_id=211, employeeName='Zulfa', hrs=8, rate=1000, salary=8000}
+========================Employee 2 Details======================
+Salesperson{, employee_id=213, employeeName='Zaid', sales=2300, commission=1999, hrs=8, rate=1000, salary=4597700}
+========================Employee 3 Details======================
+Manager{, employee_id=212, employeeName='Ram', fixed_salary=10000, incentives=1000, salary=11000}
 
 Process finished with exit code 0
+
+
  */
