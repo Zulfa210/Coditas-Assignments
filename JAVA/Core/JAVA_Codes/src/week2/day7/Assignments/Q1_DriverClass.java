@@ -45,7 +45,7 @@ class WageEmployee extends Employee{
     public void computeSalary(){
         super.displayData();
         int salary = hrs * rate;
-        System.out.println("Salary of WageEmployee is" + salary);
+        System.out.println("Salary of WageEmployee is " + salary);
     }
 
 
@@ -105,7 +105,7 @@ class TestEmployee{
         employee.computeSalary();
 
         //object of salesperson class
-        Employee employee1 = new Salesperson(213, "Priya", 8, 1000, 2300, 1999);
+        Employee employee1 = new Salesperson(213, "Zaid", 8, 1000, 2300, 1999);
         employee1.computeSalary();
 
         //object of manager class
@@ -124,5 +124,20 @@ public class Q1_DriverClass {
 
     }
 
-
 }
+/*Output:
+--------------------------------------------------
+Name: Zulfa
+ID: 211
+Salary of WageEmployee is 8000
+--------------------------------------------------
+Name: Zaid
+ID: 213
+Salary of Salesperson is 43700
+--------------------------------------------------
+Name: Ram
+ID: 212
+Salary of Manager is 11000
+
+Process finished with exit code 0
+ */
