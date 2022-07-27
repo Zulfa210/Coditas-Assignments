@@ -136,21 +136,18 @@ class TestEmployee{
     public void displayEmployee(){
 
         Employee employee[]=new Employee[3];
+
         //object of wageEmployee class
-        Employee employee1 = new WageEmployee(211, "Zulfa", 8, 1000);
-        employee1.computeSalary();
+        employee[0] = new WageEmployee(211, "Zulfa", 8, 1000);
+        employee[0].computeSalary();
 
         //object of salesperson class
-        Employee employee2 = new Salesperson(213, "Zaid", 8, 1000, 2300, 1999);
-        employee2.computeSalary();
+        employee[1] = new Salesperson(213, "Zaid", 8, 1000, 2300, 1999);
+        employee[1].computeSalary();
 
         //object of manager class
-        Employee employee3 = new Manager(212, "Ram", 10000, 1000);
-        employee3.computeSalary();
-
-        employee[0] = employee1;
-        employee[1] = employee2;
-        employee[2] = employee3;
+        employee[2] = new Manager(212, "Ram", 10000, 1000);
+        employee[2].computeSalary();
 
 
         new TestEmployee().displayEmployeeDetail(employee);
