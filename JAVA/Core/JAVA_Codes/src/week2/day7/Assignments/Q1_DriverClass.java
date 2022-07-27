@@ -22,18 +22,21 @@ class Employee{
     public void computeSalary(){
     }
 
-    public void displayData(){
-        System.out.println("--------------------------------------------------");
-        System.out.println("Name: "+ employeeName);
-        System.out.println("ID: "+ employee_id);
-        //System.out.println("Name: "+ employeeName);
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employee_id=" + employee_id +
+                ", employeeName='" + employeeName + '\'' +
+                '}';
     }
+
 }
 
 class WageEmployee extends Employee{
 
     int hrs;
     int rate;
+
 
     WageEmployee(int id, String name, int hrs, int rate){
         super(id, name);
@@ -43,7 +46,8 @@ class WageEmployee extends Employee{
     WageEmployee(){
     }
     public void computeSalary(){
-        super.displayData();
+        System.out.println("------------------------------------------------------");
+        System.out.println(super.toString());
         int salary = hrs * rate;
         System.out.println("Salary of WageEmployee is " + salary);
     }
@@ -65,8 +69,9 @@ class Salesperson extends WageEmployee{
     }
     public void computeSalary(){
 
-        super.displayData();
-        int salary  = sales * (commission/100);
+        System.out.println("------------------------------------------------------");
+        System.out.println(super.toString());
+        int salary  = sales + commission;
         System.out.println("Salary of Salesperson is " + salary);
 
     }
@@ -88,7 +93,8 @@ class Manager extends Employee {
     }
 
     public void computeSalary() {
-        super.displayData();
+        System.out.println("------------------------------------------------------");
+        System.out.println(super.toString());
         int salary = fixed_salary + incentives;
         System.out.println("Salary of Manager is " + salary);
     }
@@ -126,17 +132,15 @@ public class Q1_DriverClass {
 
 }
 /*Output:
---------------------------------------------------
-Name: Zulfa
-ID: 211
+
+------------------------------------------------------
+Employee{employee_id=211, employeeName='Zulfa'}
 Salary of WageEmployee is 8000
---------------------------------------------------
-Name: Zaid
-ID: 213
-Salary of Salesperson is 43700
---------------------------------------------------
-Name: Ram
-ID: 212
+------------------------------------------------------
+Employee{employee_id=213, employeeName='Zaid'}
+Salary of Salesperson is 4299
+------------------------------------------------------
+Employee{employee_id=212, employeeName='Ram'}
 Salary of Manager is 11000
 
 Process finished with exit code 0
