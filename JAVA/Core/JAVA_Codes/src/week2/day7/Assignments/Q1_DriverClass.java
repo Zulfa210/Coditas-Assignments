@@ -38,17 +38,7 @@ class WageEmployee extends Employee{
 
     int hrs;
     int rate;
-int salary;
-    @Override
-    public String toString() {
-        return "WageEmployee{" +
-                ", employee_id=" + employee_id +
-                ", employeeName='" + employeeName + '\'' +
-                ", hrs=" + hrs +
-                ", rate=" + rate +
-                ", salary=" + salary +
-                '}';
-    }
+    int salary;
 
     WageEmployee(int id, String name, int hrs, int rate){
         super(id, name);
@@ -61,6 +51,17 @@ int salary;
         salary = hrs * rate;
     }
 
+    @Override
+    public String toString() {
+        return "WageEmployee{" +
+                ", employee_id=" + employee_id +
+                ", employeeName='" + employeeName + '\'' +
+                ", hrs=" + hrs +
+                ", rate=" + rate +
+                ", salary=" + salary +
+                '}';
+    }
+
 
 }
 /*2. Create SalesPerson class extending WageEmployee with attributes as sales(int) and commission (int)
@@ -70,7 +71,7 @@ class Salesperson extends WageEmployee{
 
     int sales;
     int commission;
-int salary;
+    int salary;
     Salesperson(int id, String n, int hrs, int rate, int sales, int commission){
         super(id, n, hrs, rate);
         this.sales = sales;
@@ -99,16 +100,7 @@ incentives(int) and method computeSalary() to calculate the salary of Manager Pr
  */
 
 class Manager extends Employee {
-    @Override
-    public String toString() {
-        return "Manager{" +
-                ", employee_id=" + employee_id +
-                ", employeeName='" + employeeName + '\'' +
-                ", fixed_salary=" + fixed_salary +
-                ", incentives=" + incentives +
-                ", salary=" + salary +
-                '}';
-    }
+
 
     int fixed_salary;
     int incentives;
@@ -122,6 +114,17 @@ class Manager extends Employee {
 
     public void computeSalary() {
         salary = fixed_salary + incentives;
+    }
+
+    @Override
+    public String toString() {
+        return "Manager{" +
+                ", employee_id=" + employee_id +
+                ", employeeName='" + employeeName + '\'' +
+                ", fixed_salary=" + fixed_salary +
+                ", incentives=" + incentives +
+                ", salary=" + salary +
+                '}';
     }
 }
 
