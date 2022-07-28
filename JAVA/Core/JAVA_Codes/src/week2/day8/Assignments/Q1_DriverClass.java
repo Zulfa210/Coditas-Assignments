@@ -25,11 +25,14 @@ class Truck extends Vehicle{
 public class Q1_DriverClass {
 
     public static void main(String[] args) {
-        Vehicle car = new Car();
-        car.engine();
 
-        Vehicle truck  = new Truck();
-        truck.engine();
+        Vehicle vehicle[] = new Vehicle[2];
+
+        vehicle[0] = new Car();
+        vehicle[0].engine();
+
+        vehicle[1]= new Truck();
+        vehicle[1].engine();
     }
 }
 
