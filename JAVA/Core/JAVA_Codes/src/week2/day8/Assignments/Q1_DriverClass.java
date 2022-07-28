@@ -26,13 +26,13 @@ public class Q1_DriverClass {
 
     public static void main(String[] args) {
 
-        Vehicle vehicle[] = new Vehicle[2];
+        Vehicle vehicle;
 
-        vehicle[0] = new Car();
-        vehicle[0].engine();
+        vehicle= new Car();
+        vehicle.engine();
 
-        vehicle[1]= new Truck();
-        vehicle[1].engine();
+        vehicle= new Truck();
+        vehicle.engine();
     }
 }
 
