@@ -123,11 +123,9 @@ public class Ques3_DriverClass {
 //Area of Rectangle is 15.0
 //------------------------------------------
 //Object 2:
-//Enter length:
-//12
-//Enter Breadth:
-//1
-//Area of Rectangle is 12.0
+//Enter Radius:
+//22
+//Area of Circle is: 1520.531
 //------------------------------------------
 //Object 3:
 //Enter length of side:
