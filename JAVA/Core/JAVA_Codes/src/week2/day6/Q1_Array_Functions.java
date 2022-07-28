@@ -22,7 +22,6 @@ class ArrayFunctions{
         Arrays.asList(array1);
         System.out.println("Using asList() function: " +Arrays.toString(array1) );
 
-
         System.out.println("Using sort() function");
         Arrays.sort(array1);
         displayData(array1);
