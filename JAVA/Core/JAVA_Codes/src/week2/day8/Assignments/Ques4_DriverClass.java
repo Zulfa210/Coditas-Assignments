@@ -1,13 +1,15 @@
 package week2.day8.Assignments;
-//3). Create a class Medicine to represent a drug manufactured by a pharmaceutical company.
-// Provide a function display Label() in this class to print Name and address of the company.
-//Derive Tablet, Syrup and Ointment classes from the Medicine class.
-//Override the displayLabel() function in each of these classes to print additional
-// information suitable to the type of medicine.
-//For example, in case of tablets, it could be "store in a cool dry place",
-// in case of ointments it could be "for external use only" etc. Create a class TestMedicine. Write main function to do the following: Declare an array of Medicine references of size 10 Create a medicine object of the type as decided by a randomly generated integer in the range 1 to 3. Refer Java API Documentation to find out random generation features.
-// Check the polymorphic behavior of the displayLabel() method.
-
+//4). Create an abstract class shape with abstract method void area(); create 4 more classes circle,
+// cylinder, square and rectangle
+//        shape
+//        circle
+//        cylinder
+//        square
+//        rectangle
+// SHAPE is parent for circle and square, and circle is parent for cylinder,rectangle is child
+//of square.
+//Override the area() in all the classes Create an array of references of type shape in TestShape class and print the area of different types of shapes.
+//
 import java.util.Random;
 import java.util.Scanner;
 
@@ -84,7 +86,7 @@ class Rectangle extends Square{
     }
 }
 
-public class Ques3_DriverClass {
+public class Ques4_DriverClass {
     public static void main(String[] args) {
         Shape shape[] = new Shape[5];
         Random randomVariable = new Random();
