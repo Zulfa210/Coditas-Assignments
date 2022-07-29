@@ -27,7 +27,7 @@ public class Ques5_DriverClass {
 
     void displayEnum(){
         for(Signal colour: Signal.values())
-            System.out.println(colour.name() + " stands for " + colour.getData());
+            System.out.println(colour.name() + " means " + colour.getData());
     }
     public static void main(String[] args) {
 
@@ -36,6 +36,6 @@ public class Ques5_DriverClass {
     }
 }
 //output:
-//RED stands for STOP
-//GREEN stands for GO
-//YELLOW stands for DRIVE VERY SLOWLY
+//RED means STOP
+//GREEN means GO
+//YELLOW means DRIVE VERY SLOWLY
