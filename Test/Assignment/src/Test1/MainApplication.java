@@ -36,3 +36,9 @@ public class MainApplication {
 
     }
 }
+//output:
+//2 15 1 100 70
+//-----------------------------------------------------
+//Greatest element is: 100
+//-----------------------------------------------------
+//Fourth Largest element is 2
