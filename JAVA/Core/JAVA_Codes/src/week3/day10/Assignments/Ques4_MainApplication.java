@@ -30,3 +30,6 @@ public class Ques4_MainApplication {
         method1.invoke(calculate, a, b);
     }
 }
+
+//output:
+//Addition is : 22
