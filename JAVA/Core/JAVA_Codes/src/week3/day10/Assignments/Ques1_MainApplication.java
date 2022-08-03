@@ -35,6 +35,7 @@ class Student{
     }
 }
 
+
 class Java_Student extends Student{
 
     int marks_in_java;
