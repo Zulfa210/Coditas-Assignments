@@ -19,7 +19,7 @@ class OperatorOperands{
             System.out.print(tokenExpression2.nextToken() + " ");
 
         System.out.println("\nSeparated Operators: ");
-        StringTokenizer tokenExpression3 = new StringTokenizer(expression, "320");
+        StringTokenizer tokenExpression3 = new StringTokenizer(expression, "1234567890");
         while(tokenExpression3.hasMoreTokens())
             System.out.print(tokenExpression3.nextToken() + " ");
 
