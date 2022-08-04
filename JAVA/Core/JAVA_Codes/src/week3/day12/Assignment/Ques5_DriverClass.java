@@ -78,6 +78,12 @@ public class Ques5_DriverClass {
 }
 
 //output:
+//Enter names:
+//Zulfa
+//Anuj
+//Zaid
+//Abhishek
+//Shubham
 //Original Array:
 //Zulfa
 //Anuj
