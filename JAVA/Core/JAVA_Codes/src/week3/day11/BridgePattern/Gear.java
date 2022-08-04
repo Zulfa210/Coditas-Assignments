@@ -11,6 +11,7 @@ class ManualGear implements Gear{
         System.out.println("Manual gear");
     }
 }
+
 /* Concrete Implementor - 2 */
 class AutoGear implements Gear {
     public void handleGear() {

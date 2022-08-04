@@ -35,6 +35,9 @@ public class Ques2_MainApplication {
         System.out.println("Package of class: " + class1.getPackage());
         System.out.println("Super class of class: " + class1.getSuperclass());
 
+
+
+
         //using Class.getConstructors() to access all public constructors of a class
         Constructor[] constructors = class1.getConstructors();
 
