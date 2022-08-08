@@ -1,4 +1,4 @@
-package week4.Assignments;
+package week4.Day13.Assignments;
 
 /**Q.1) Write a code for "ClassCastException" and handle it using Exception Handling Mechanism
  *=>try,catch, finally
@@ -57,7 +57,7 @@ public class Ques1_ClassCastException_Demo {
 Output:
 ========================================================
 Exception class: class java.lang.ClassCastException
-Message: week4.Assignments.Shape cannot be cast to week4.Assignments.Triangle
+Message: week4.Day13.Assignments.Shape cannot be cast to week4.Day13.Assignments.Triangle
 ===============================================
 Inside Finally block, after exception occurred
 

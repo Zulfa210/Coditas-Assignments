@@ -1,4 +1,4 @@
-package week4.Assignments;
+package week4.Day13.Assignments;
 
 /**Q.3)public class ABC
  public static void main(String[] args) {

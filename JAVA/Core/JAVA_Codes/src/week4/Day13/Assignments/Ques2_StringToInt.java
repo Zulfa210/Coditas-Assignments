@@ -1,4 +1,4 @@
-package week4.Assignments;
+package week4.Day13.Assignments;
 /**
  * Q.2) Try to add String data in Numeric data type then handle this exception
  *
@@ -34,7 +34,7 @@ Output:
 Enter a value:
 Hello
 =========================================
-Exception class: class java.lang.NumberFormatException
+Exception class: class java.lang.NpumberFormatExcetion
 Message: For input string: "Hello"
 Please Enter Integer Value
 ==================END======================
