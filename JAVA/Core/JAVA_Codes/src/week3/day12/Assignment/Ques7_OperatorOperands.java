@@ -9,7 +9,7 @@ class OperatorOperands{
     public static void checkTokens(String expression){
 
         System.out.println("\nSeparated Tokens: ");
-        StringTokenizer tokenExpression1 = new StringTokenizer(expression, "+()/*%");
+        StringTokenizer tokenExpression1 = new StringTokenizer(expression, "+,(,),/,*,%");
         while(tokenExpression1.hasMoreTokens())
            System.out.print(tokenExpression1.nextToken() + " ");
 

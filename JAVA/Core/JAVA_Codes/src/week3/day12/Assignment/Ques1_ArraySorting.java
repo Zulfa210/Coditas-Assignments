@@ -4,6 +4,7 @@ package week3.day12.Assignment;
 
 class ReorderArray{
     public static void sortArray(String[] names){
+
         for (int i = 1; i<names.length; i++){
 
             String temp = names[i];

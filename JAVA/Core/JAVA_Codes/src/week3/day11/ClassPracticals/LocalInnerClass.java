@@ -31,6 +31,8 @@ public class LocalInnerClass {
         //outer.display();
 
         Outer.Member_Inner member_inner = outer.new Member_Inner();
+
+       // Outer.Member_Inner member_inner1 = new Outer.Member_Inner();
         member_inner.show();
     }
 }

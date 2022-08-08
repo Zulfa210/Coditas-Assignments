@@ -17,6 +17,7 @@ class Student{
     public String name;
 
     public Student(){
+        super();
         System.out.println("Inside Default constructor");
     }
 
@@ -40,9 +41,14 @@ class Java_Student extends Student{
 
     int marks_in_java;
 
+    Java_Student(){
+
+    }
+
     //chaining with Student(int id) constructor of parent class
     // using super keyword
     public Java_Student(int id, int marks_in_java) {
+
         super(id);
         this.marks_in_java = marks_in_java;
         System.out.println("Java Student Marks are: " + marks_in_java);
