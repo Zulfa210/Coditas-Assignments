@@ -4,7 +4,7 @@ package week4.Day14.Assignments;
  * deposit, and withdrawal operations.
  * Case 1)CREATE an InvalidAmountException if the user enters zero or -ve amount in deposit
  * and withdraw operations
- * Case 2)I hrow InsufficientBalanceException if the user enters the amount greater than the
+ * Case 2)Throw InsufficientBalanceException if the user enters the amount greater than the
  * balance in case of withdrawing operations
  *
  * @author Zulfa-Coditas
