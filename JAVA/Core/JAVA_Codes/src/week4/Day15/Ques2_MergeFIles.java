@@ -4,9 +4,9 @@ import java.io.*;
 import java.util.Scanner;
 
 /**
- * Get data from two file and insert that two file data into third one and read third file data
+ * Q.2)Get data from two file and insert that two file data into third one and read third file data
  *
- *
+ * @author Zulfa Attar
  */
 
 class MergeFilesClass {
