@@ -1,4 +1,4 @@
-package week4.Day16;
+package week4.Day16.Assignments.Q2_InputWays;
 
 import java.io.Serializable;
 
@@ -13,4 +13,12 @@ public class Employee implements Serializable {
         this.esal = esal;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "\neid=" + eid +
+                "\nname='" + name  +
+                "\nesal=" + esal +
+                '}';
+    }
 }

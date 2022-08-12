@@ -106,7 +106,7 @@ class FileHandling {
 
         try {
             FileWriter fileWriter = new FileWriter("abc.txt");
-            fileWriter.write("Java is an Object Oriented Programming Language.                                                       ");
+            fileWriter.write("Java is an Object Oriented Programming Language.");
             fileWriter.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -118,10 +118,11 @@ class FileHandling {
     public void ReadFromFile(){
         try {
             BufferedReader myReader = new BufferedReader(new FileReader("abc.txt"));
-            char[] array = new char[100];
-            myReader.read(array);
+           int i;
             System.out.println("Data in the file: ");
-            System.out.println(array);
+           while((i=myReader.read()) != -1) {
+               System.out.print((char)i);
+           }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

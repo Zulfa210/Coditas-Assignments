@@ -1,5 +1,7 @@
 package week4.Day16;
 
+import week4.Day16.Assignments.Q2_InputWays.Employee;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
