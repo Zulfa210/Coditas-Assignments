@@ -11,10 +11,13 @@ import java.io.FileWriter;
 public class Q5_ClosingStream {
     void withoutClosingStream() {
         try{
+            System.out.println("========Without Closing Stream=============");
+            //writing in file
             FileWriter fileWriter = new FileWriter("closing.txt");
             fileWriter.write("Hello! This is Zulfa Attar");
             FileReader fileReader = new FileReader("closing.txt");
 
+            //reading file
             int i;
             while((i=fileReader.read())!=-1) {
                 System.out.print((char)i);
@@ -26,16 +29,18 @@ public class Q5_ClosingStream {
     }
     void withClosingStream() {
         try {
+            System.out.println("========With Closing Stream=============");
+            //writing in file
             FileWriter fileWriter = new FileWriter("closing.txt");
-
             fileWriter.write("Hello! This is Zulfa Attar");
             fileWriter.close();
+
+            //reading file
             FileReader fileReader = new FileReader("closing.txt");
             int i;
             while((i=fileReader.read())!=-1){
                 System.out.print((char)i);
             }
-
             fileReader.close();
         }catch(Exception e) {
             System.out.println(e.getMessage());
@@ -44,9 +49,8 @@ public class Q5_ClosingStream {
 
     public static void main(String[] args) {
         Q5_ClosingStream stream = new Q5_ClosingStream();
-        System.out.println("========Without Closing Stream=============");
+
         stream.withoutClosingStream();
-        System.out.println("========With Closing Stream=============");
         stream.withClosingStream();
 
     }
