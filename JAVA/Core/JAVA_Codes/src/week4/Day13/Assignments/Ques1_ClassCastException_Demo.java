@@ -36,7 +36,7 @@ public class Ques1_ClassCastException_Demo {
             Shape shape = new Shape();
 
             //type casting shape object to Triangle object
-            //this will give Class cast Exception, because we are types casting
+            //this will give Class cast Exception, because we are typecasting
             //parent type to its child type
             Triangle triangle = (Triangle) shape;
         }

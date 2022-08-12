@@ -10,11 +10,6 @@ import java.util.Scanner;
  */
 
 class MergeFilesClass {
-    SequenceInputStream addTwoFileDataInOne=null;
-    FileInputStream file1 = null;
-    FileInputStream file2 = null;
-    FileOutputStream file1AndFile2Data = null;
-    FileInputStream bufferedInputStream3 =null;
 
     void mergeDataInThirdFile(String firstdata, String seconddata)
     {
@@ -23,33 +18,23 @@ class MergeFilesClass {
         int j;
         try {
 
-            //this statement is used to add data in both file before fetching data from both file
 
-
-
-            file1 = new FileInputStream("file1.txt");
-
-            file2 = new FileInputStream("file2.txt");
-
-            addTwoFileDataInOne = new SequenceInputStream(file1,file2);
-
-            file1AndFile2Data = new FileOutputStream("file3.txt");
+            FileInputStream file1 = new FileInputStream("file1.txt");
+            FileInputStream file2 = new FileInputStream("file2.txt");
+            SequenceInputStream sequenceInputStream = new SequenceInputStream(file1,file2);
+            FileOutputStream file3 = new FileOutputStream("file3.txt");
 
             //get data from file.txt and file2.txt and add both file data into file3
 
-            while ((j = addTwoFileDataInOne.read()) != -1) {
-                file1AndFile2Data.write(j);
+            while ((j = sequenceInputStream.read()) != -1) {
+                file3.write(j);
 
             }
             //closeing all open file
-            addTwoFileDataInOne.close();
-
+            sequenceInputStream.close();
             file1.close();
-
             file2.close();
-
-            file1AndFile2Data.close();
-
+            file3.close();
             System.out.println("=================DATA INSERTED IN THIRD FILE=================");
 
         }catch(Exception e)
@@ -63,16 +48,13 @@ class MergeFilesClass {
 
         try {
 
-            bufferedInputStream3 = new FileInputStream("file3.txt");
-
+            FileInputStream bufferedInputStream3 = new FileInputStream("file3.txt");
             int j;
-            //read data from thrid file
-
+            //reading data from third file
             while ((j =  bufferedInputStream3.read()) != -1) {
                 System.out.print((char)j);
             }
-            //close third file connection
-
+            //closing third file connection
             bufferedInputStream3.close();
 
         } catch (Exception e) {
@@ -85,17 +67,11 @@ class MergeFilesClass {
     {
         try {
 
-
             FileOutputStream file1 = new FileOutputStream("file1.txt");
-
             FileOutputStream file2 = new FileOutputStream("file2.txt");
-
             file1.write(firstdata.getBytes());
-
             file2.write(seconddata.getBytes());
-
             file1.close();
-
             file2.close();
 
             System.out.println("================DATA ADDED SUCCESSFULLY==================");
