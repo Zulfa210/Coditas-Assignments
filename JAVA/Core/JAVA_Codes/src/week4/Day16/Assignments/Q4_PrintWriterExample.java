@@ -1,5 +1,10 @@
 package week4.Day16.Assignments;
 
+/**
+ * Q.4)Explore Binary Input and Output and PrintWriter class as well with examples.
+ * @author Zulfa Attar
+ */
+
 import java.io.File;
 import java.io.PrintWriter;
 

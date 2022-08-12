@@ -1,5 +1,10 @@
 package week4.Day16.Assignments;
 
+/**
+ * Q.5)Closing Streams is important or not? Explain by writing code
+ * @author Zulfa Attar
+ */
+
 import java.io.FileReader;
 import java.io.FileWriter;
 

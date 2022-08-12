@@ -1,4 +1,11 @@
 package week4.Day16.Assignments;
+/**
+ * Q.6)Explore this code,execute t,pass the arguments for CLI
+ * >add code for case:lf access granted,
+ * print that file data in console.
+ *
+ * @author Zulfa Attar
+ */
 
 import java.io.File;
 import java.io.FileOutputStream;

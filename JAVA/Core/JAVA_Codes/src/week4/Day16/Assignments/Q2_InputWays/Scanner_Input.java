@@ -1,4 +1,13 @@
 package week4.Day16.Assignments.Q2_InputWays;
+/**
+ * 2 )WRITE A PROGRAM FOR ACCEPTING DETAILS (acceptDetails0) OF AN EMPLOYEE AND
+ * DISPLAY ALL DETAILS(displayDetails(0)
+ * USE ALL 4 WAYS
+ * =>CREATE SEPARATE FILES FOR EVERY
+ * WAY(SCANNER,BUFFEREDREADER,CONSOLE,CLI)
+ *
+ * @author Zulfa
+ */
 
 import java.util.Scanner;
 
