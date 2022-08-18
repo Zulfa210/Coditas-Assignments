@@ -35,7 +35,20 @@ class Student{
     }
 }
 
+class A
+{
+    static class B {
+      //  int a;
+        static void show() {
 
+        }
+
+        void display()
+        {
+
+        }
+    }
+}
 public class Q1_Static_Keyword {
 
     public static void main(String[] args) {
@@ -48,6 +61,7 @@ public class Q1_Static_Keyword {
 
         //accessing static method of static class through direct class name
         Student.innerStatic.showCollege();
+
 
     }
 }

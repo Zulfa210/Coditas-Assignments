@@ -13,12 +13,8 @@ class MergeFilesClass {
 
     void mergeDataInThirdFile(String firstdata, String seconddata)
     {
-
-
         int j;
         try {
-
-
             FileInputStream file1 = new FileInputStream("file1.txt");
             FileInputStream file2 = new FileInputStream("file2.txt");
             SequenceInputStream sequenceInputStream = new SequenceInputStream(file1,file2);
@@ -44,10 +40,7 @@ class MergeFilesClass {
     }
     void getDataFromThirdFile()
     {
-
-
         try {
-
             FileInputStream bufferedInputStream3 = new FileInputStream("file3.txt");
             int j;
             //reading data from third file
@@ -66,7 +59,6 @@ class MergeFilesClass {
     void addDataInFiles(String firstdata, String seconddata)
     {
         try {
-
             FileOutputStream file1 = new FileOutputStream("file1.txt");
             FileOutputStream file2 = new FileOutputStream("file2.txt");
             file1.write(firstdata.getBytes());

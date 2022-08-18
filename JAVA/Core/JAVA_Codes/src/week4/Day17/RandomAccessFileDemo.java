@@ -21,7 +21,6 @@ public class RandomAccessFileDemo {
             System.out.println(raf.readInt());
 
         }catch (Exception e){
-
         }
     }
 }

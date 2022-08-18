@@ -15,6 +15,7 @@ public interface ShapeNew {
     static void display(){
     }
     default void draw(){
+        System.out.println("Hello");
     }
 }
 
@@ -23,11 +24,11 @@ class Rectangle implements ShapeNew{
 
     @Override
     public void area() {
-
+        System.out.println("Area is");
     }
 
-    @Override
-    public void draw() {
-        //ShapeNew.super.draw();
+    public static void main(String[] args) {
+        ShapeNew shapeNew = new Rectangle();
+        shapeNew.draw();
     }
 }

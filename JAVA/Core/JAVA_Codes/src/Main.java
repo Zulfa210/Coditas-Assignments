@@ -1,24 +1,31 @@
-import java.io.FileReader;
+import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-        Object o = new Object();
 
-        //FileReader reader = new FileReader("Abc.txt");
-        //System.out.println("Hello world!");
 
-        for(int i = 0; i<5; i++){
-            for(int j = 0; j<5 ; j++){
-                if(i == 0 || i == 4){
-                    System.out.print("* ");
-                }
-                else if(j == 0 || j == 4){
-                    System.out.print("* ");
-                }
-                else
-                    System.out.print("  ");
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("gstData.csv"));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("gst.xlsx"));
+
+            String s = null;
+            while(true) {
+                s = bufferedReader.readLine();
+                if(s == null)
+                    break;
+                bufferedWriter.write(s);
+                bufferedWriter.newLine();
+
             }
-            System.out.println();
+
+            bufferedReader.close();
+            bufferedWriter.close();
+
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }finally {
+
         }
     }
 }

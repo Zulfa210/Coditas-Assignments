@@ -49,7 +49,6 @@ public class Q5_ClosingStream {
 
     public static void main(String[] args) {
         Q5_ClosingStream stream = new Q5_ClosingStream();
-
         stream.withoutClosingStream();
         stream.withClosingStream();
 
