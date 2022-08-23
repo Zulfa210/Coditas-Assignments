@@ -33,3 +33,22 @@ public class Q4_OddNumbers {
         thread.start();
     }
 }
+
+/*
+Output:
+Running Thread name: Thread-0
+Enter bound:
+15
+Printing Odd Numbers upto 15
+1
+3
+5
+7
+9
+11 
+13
+15
+
+Process finished with exit code 0
+
+ */
