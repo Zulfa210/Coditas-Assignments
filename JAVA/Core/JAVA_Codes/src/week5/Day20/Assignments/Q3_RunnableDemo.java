@@ -24,7 +24,14 @@ public class Q3_RunnableDemo {
 
         System.out.println("Name of Thread: " + thread.getName());
         System.out.println("State of Thread: " + thread.getState());
-
+        System.out.println("ID of Thread: " + thread.getId());
+        System.out.println("Priority of Thread: " + thread.getPriority());
+        System.out.println("Class of Thread: " + thread.getClass());
+        System.out.println("" + thread.getClass());
+        System.out.println("" + thread.getContextClassLoader());
+        System.out.println("" + thread.getStackTrace());
+        System.out.println("" + thread.getThreadGroup());
+        System.out.println("" + thread.getUncaughtExceptionHandler());
 
     }
 }

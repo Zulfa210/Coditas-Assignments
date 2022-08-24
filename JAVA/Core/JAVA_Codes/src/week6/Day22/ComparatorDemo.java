@@ -87,8 +87,11 @@ public class ComparatorDemo {
 
         HashMap<Integer, Employee> hashMap = new HashMap<>();
 
+        hashMap.put(101, new Employee(7, "Zulfa", "Pune"));
+        hashMap.put(102, new Employee(8, "Aarti", "Mumbai"));
+        hashMap.put(103, new Employee(6, "Aarti", "Pune"));
 
-
+        System.out.println(hashMap.size());
     }
 
 }

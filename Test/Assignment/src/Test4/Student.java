@@ -50,7 +50,7 @@ class Student{
         this.city = city;
         this.techStack = techStack;
         this.mobileNo = mobileNo;
-        this.scanner = scanner;
+      //  this.scanner = scanner;
 
 
     }
