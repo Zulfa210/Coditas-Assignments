@@ -72,12 +72,17 @@ public class ComparatorDemo {
         for(int i=0; i<arrayList.size(); i++){
             System.out.println(arrayList.get(i));
         }
-
+        System.out.println("=======================================================");
+        Collections.reverse(arrayList);
+        for(int i=0; i<arrayList.size(); i++){
+            System.out.println(arrayList.get(i));
+        }
         System.out.println("***************AFTER SORTING BY NAME************************");
         Collections.sort(arrayList, new SortByName());
         for(int i=0; i<arrayList.size(); i++){
             System.out.println(arrayList.get(i));
         }
+
 
         System.out.println("***************AFTER SORTING BY CITY************************");
         Collections.sort(arrayList, new SortByCity());

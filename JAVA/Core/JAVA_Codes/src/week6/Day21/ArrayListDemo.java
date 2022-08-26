@@ -10,6 +10,7 @@ public class ArrayListDemo {
     public static void main(String[] args) {
 
         int n = 5;
+
         ArrayList arrayList = new ArrayList();
 
         arrayList.add(12);
@@ -28,8 +29,8 @@ public class ArrayListDemo {
         for(int i = 0; i<arrayList.size(); i++){
             System.out.print(arrayList.get(i) + " ");
         }
-
-        System.out.println();
+        arrayList.forEach(ss->System.out.println(ss));
+                System.out.println();
 
         ArrayList arrayList1 = new ArrayList();
 
