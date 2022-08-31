@@ -1,6 +1,7 @@
 package week7.Day26.Assignments;
 
 /**
+ * Q.5) Try to add image in Database
  * @author Zulfa Attar
  */
 import java.io.FileInputStream;

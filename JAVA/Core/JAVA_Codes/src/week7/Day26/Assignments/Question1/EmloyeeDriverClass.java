@@ -3,6 +3,15 @@ package week7.Day26.Assignments.Question1;
 import java.util.Scanner;
 
 /**
+ * Q.1)Consider Entity=>Employee(id,name,designation,doj,exp,salary.status)
+ * note->doj→Date of joining,status >>working/left
+ * case1->add 10 records
+ * case2=>show all records.
+ * case3=>alter table by adding field "city"
+ * case4=>fetch only those Employees who are from PUNE and salary>20000
+ * case5=>update salary by 1000 of Employees whose experience is more than
+ * 3years
+ * case6=>delete those employees who left the organization.
  * @author Zulfa Attar
  */
 

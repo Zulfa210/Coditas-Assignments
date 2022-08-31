@@ -2,7 +2,7 @@ package week7.Day27;
 
 import java.sql.*;
 
-/**
+/**Q.9)Create table of Teacher student using M-M relationship(College)
  * @author Zulfa Attar
  */
 class StudentToTeacher{
@@ -48,7 +48,7 @@ class StudentToTeacher{
 
     }
 }
-public class StudentTeacherMtoM {
+public class Q9_StudentTeacherMtoM {
     public static void main(String[] args) {
 
         new StudentToTeacher().showTeachersWithStudents();

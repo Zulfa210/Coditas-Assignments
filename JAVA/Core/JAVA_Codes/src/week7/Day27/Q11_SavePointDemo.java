@@ -3,67 +3,63 @@ package week7.Day27;
 import java.sql.*;
 import java.util.Scanner;
 
-/**Q.7)Transaction management program,where display the records before and
- after rollback.
+/**
+ * 11)check the concept of savepoint() and try to implement it using a simple example.
+ * Add the output of every different scenario.
  * @author Zulfa Attar
  */
-class CommitAndRollback{
+class SavepointRollback {
     Connection connection;
     ResultSet resultSet;
     Statement statement;
-    void commitRollback(){
+
+    void commitRollback() {
         try {
             Scanner scanner = new Scanner(System.in);
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms", "root", "zulfa123");
             connection.setAutoCommit(false);
 
-            PreparedStatement preparedStatement = connection.prepareStatement("insert into teacher values (?,?,?)");
+            showRecords();
+
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from teacher where id = ?");
             int choice = 1;
-            do{
-                System.out.println("Enter Teacher id: ");
-                preparedStatement.setInt(1,scanner.nextInt());
-                System.out.println("Enter Teacher name: ");
-                preparedStatement.setString(2, scanner.next());
-                System.out.println("Enter Teacher designation: ");
-                preparedStatement.setString(3, scanner.next());
+            do {
+                Savepoint beforeDeleting = connection.setSavepoint();
+                System.out.println("Enter Teacher id to delete: ");
+                preparedStatement.setInt(1, scanner.nextInt());
 
                 preparedStatement.executeUpdate();
 
                 resultSet = preparedStatement.executeQuery("Select * from teacher");
-                System.out.printf("%-10s"+ "%-20s" + "%-20s" + '\n',"ID ", "NAME" ,"DESIGNATION");
-                while (resultSet.next()){
-                    System.out.printf("%-10s"+ "%-20s" + "%-20s"  + '\n',
-                            resultSet.getInt(1) , resultSet.getString(2) ,resultSet.getString(3)) ;
+                System.out.printf("%-10s" + "%-20s" + "%-20s" + '\n', "ID ", "NAME", "DESIGNATION");
+                while (resultSet.next()) {
+                    System.out.printf("%-10s" + "%-20s" + "%-20s" + '\n',
+                            resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3));
                 }
                 System.out.println("Press 1 to Commit and 2 to Rollback");
 
                 int commitOrRollback = scanner.nextInt();
-                if(commitOrRollback == 1){
-                    connection.setAutoCommit(false);
+                connection.setAutoCommit(false);
+                if (commitOrRollback == 1) {
                     connection.commit();
 
-                    showRecords();
+
+                } else {
+                    connection.rollback(beforeDeleting);
+
                 }
-                else{
-                    connection.setAutoCommit(false);
-                    connection.rollback();
-                    showRecords();
-                }
-                System.out.println("Do you want to add more records? 1.Yes 2.No");
+                showRecords();
+                System.out.println("Do you want to delete more records? 1.Yes 2.No");
                 choice = scanner.nextInt();
 
 
-
-
-
-            }while (choice !=2);
+            } while (choice != 2);
 
             connection.close();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     void showRecords(){
@@ -85,66 +81,58 @@ class CommitAndRollback{
 
     }
 }
-public class Q7_RollbackDemo {
+public class Q11_SavePointDemo {
     public static void main(String[] args) {
-        new CommitAndRollback().commitRollback();
+        new SavepointRollback().commitRollback();
     }
 }
 
 /*
 Output:
-Enter Teacher id:
-11
-Enter Teacher name:
-sjhs
-Enter Teacher designation:
-aaa
 ID        NAME                DESIGNATION
 1         Zulfa               Teacher
 2         Adi                 Trainer
 3         Shubh               Professor
-4         devansh             Associate
-5         Ayush               Teacher
-6         Abhi                Trainer
-11        sjhs                aaa
+4         Dev                 associate
+5         Ayush               Trainer
+6         Abhi                Teacher
+Enter Teacher id to delete:
+6
+ID        NAME                DESIGNATION
+1         Zulfa               Teacher
+2         Adi                 Trainer
+3         Shubh               Professor
+4         Dev                 associate
+5         Ayush               Trainer
+Press 1 to Commit and 2 to Rollback
+1
+ID        NAME                DESIGNATION
+1         Zulfa               Teacher
+2         Adi                 Trainer
+3         Shubh               Professor
+4         Dev                 associate
+5         Ayush               Trainer
+Do you want to delete more records? 1.Yes 2.No
+1
+Enter Teacher id to delete:
+5
+ID        NAME                DESIGNATION
+1         Zulfa               Teacher
+2         Adi                 Trainer
+3         Shubh               Professor
+4         Dev                 associate
 Press 1 to Commit and 2 to Rollback
 2
 ID        NAME                DESIGNATION
 1         Zulfa               Teacher
 2         Adi                 Trainer
 3         Shubh               Professor
-4         devansh             Associate
-5         Ayush               Teacher
-6         Abhi                Trainer
-Do you want to add more records? 1.Yes 2.No
-1
-Enter Teacher id:
-7
-Enter Teacher name:
-Usman
-Enter Teacher designation:
-Trainer
-ID        NAME                DESIGNATION
-1         Zulfa               Teacher
-2         Adi                 Trainer
-3         Shubh               Professor
-4         devansh             Associate
-5         Ayush               Teacher
-6         Abhi                Trainer
-7         Usman               Trainer
-Press 1 to Commit and 2 to Rollback
-1
-ID        NAME                DESIGNATION
-1         Zulfa               Teacher
-2         Adi                 Trainer
-3         Shubh               Professor
-4         devansh             Associate
-5         Ayush               Teacher
-6         Abhi                Trainer
-7         Usman               Trainer
-Do you want to add more records? 1.Yes 2.No
+4         Dev                 associate
+5         Ayush               Trainer
+Do you want to delete more records? 1.Yes 2.No
 2
 
 
 Process finished with exit code 0
+
  */

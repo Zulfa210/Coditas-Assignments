@@ -28,7 +28,7 @@ public class StudentOperations{
             float percentage = scanner.nextFloat();
             System.out.println("Enter Student city: ");
             String city = scanner.next();
-            System.out.println("Enter Student gende: ");
+            System.out.println("Enter Student gender: ");
             String gender = scanner.next();
             Student student  = new Student(id,name,year,percentage,city,gender);
 

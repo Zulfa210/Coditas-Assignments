@@ -8,12 +8,24 @@ import java.util.Scanner;
 
 /**
  * @author Zulfa Attar
+ * 2)Consider entity Student->Student(id,name,year,percentage,city)
+ * case1=>alter table and add "Gender" column in it
+ * case2=>fetch only those records who are in TY and having percentage >70
+ * case3=>fetch only those records whose id in range 1-10
+ * case4=>At the same time perform below operations
+ * case4.1>1)add 3 new records
+ * case4.2=>2)update students, if gender="M" then change name to
+ * "Ajay=>"Mr. Ajay" and if genderF then change name to "Aarti"=>"Ms.Aarti".
+ * case4.3->remove those student who are in last year
+ * ====> Try to print data on console using "format" or suitable methods with
+ * indentation
  */
 
 public class StudentJDBC {
     public static void main(String[] args) {
 
         StudentOperations studentOperations = new StudentOperations();
+//        studentOperations.alterTable();
         Scanner scanner = new Scanner(System.in);
         int choice;
         do{
@@ -45,6 +57,10 @@ public class StudentJDBC {
 
                 case 5:
                     studentOperations.removeLastYearStudents();
+                    break;
+
+                default:
+                    System.out.println("Invalid Input");
             }
 
         }while (choice!=0);
@@ -94,7 +110,7 @@ Enter Student percentage:
 89
 Enter Student city:
 Pune
-Enter Student gende:
+Enter Student gender:
 male
 Enter Student id:
 17
@@ -106,7 +122,7 @@ Enter Student percentage:
 68
 Enter Student city:
 Kanpur
-Enter Student gende:
+Enter Student gender:
 female
 Enter Student id:
 19
@@ -118,7 +134,7 @@ Enter Student percentage:
 98
 Enter Student city:
 Delhi
-Enter Student gende:
+Enter Student gender:
 male
 ID        NAME                YEAR                PERCENTAGE          CITY           GENDER
 1         Zulfa               SY                  92.0                Pune           female

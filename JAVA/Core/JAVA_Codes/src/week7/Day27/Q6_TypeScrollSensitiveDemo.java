@@ -3,7 +3,10 @@ package week7.Day27;
 import java.sql.*;
 import java.util.Scanner;
 
-/**
+/**Q.6)Write a program where you will update record of Teacher(id,name,designation)
+ using Resultset
+ Note check What is "TYPE_SCROLL_SENSITIVE"&
+ "TYPE SCROLL_INSENSITIVE"
  * @author Zulfa Attar
  */
 

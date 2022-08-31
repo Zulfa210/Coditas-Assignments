@@ -2,7 +2,9 @@ package week7.Day27;
 
 import java.sql.*;
 
-/**
+/**Q.8)Create Table Teacher-Student with relation 1-M ie. one Teacher teaches Many
+ Student(Training)
+ case1->display data teacher wise
  * @author Zulfa Attar
  */
 class StudentTeacher{
