@@ -14,7 +14,7 @@ public class Employee {
     public Employee(int employeeId, String employeeName, String designation, String dateOfJoining, int employeeExperience, float salary, String status) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
-        Designation = designation;
+        this.Designation = designation;
         this.dateOfJoining = dateOfJoining;
         this.employeeExperience = employeeExperience;
         this.salary = salary;
