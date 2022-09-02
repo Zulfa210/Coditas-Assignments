@@ -6,6 +6,7 @@ import Test6.BookPojo.Book;
  * @author Zulfa Attar
  */
 public interface DaoOperations {
+    public void createTable();
     public void addRecords(Book book);
     public void showAllRecords();
     public void updateRecords();

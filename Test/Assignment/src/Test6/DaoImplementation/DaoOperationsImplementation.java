@@ -38,6 +38,19 @@ public class DaoOperationsImplementation implements DaoOperations{
     }
 
     @Override
+    public void createTable() {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement
+                    ("create table book (id int, name varchar(50), publisher varchar(50), price float, author varchar(50));");
+            preparedStatement.executeUpdate();
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
     public void addRecords(Book book) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("insert into book values (?,?,?,?,?)");

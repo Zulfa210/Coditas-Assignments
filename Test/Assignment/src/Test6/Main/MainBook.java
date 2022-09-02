@@ -15,7 +15,7 @@ public class MainBook {
 
         int choice;
         do{
-            System.out.println("0. Exit\n1. Insert data\n2. Show Data\n3.Update Data\n4. Delete Data \n5. Sort By ID\n6. Sort By Publisher\n7. Publisher wise Author");
+            System.out.println("0. Exit\n1. Insert data\n2. Show Data\n3. Update Data\n4. Delete Data \n5. Sort By ID\n6. Sort By Publisher\n7. Publisher wise Author");
             choice = scanner.nextInt();
             switch(choice){
 
