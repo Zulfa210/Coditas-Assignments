@@ -94,7 +94,7 @@ public class DaoOperationsImplementation implements DaoOperations{
             System.out.println("Enter id to update: ");
             int id = scanner.nextInt();
 
-            System.out.println("Enter choice to update: \n 1.Name \n2. Publisher \n3.Price \n4.Author");
+            System.out.println("Enter choice to update: \n 1. Name \n2. Publisher \n3. Price \n4.Author");
             int choice = scanner.nextInt();
             switch (choice){
                 case 1:
@@ -200,7 +200,7 @@ public class DaoOperationsImplementation implements DaoOperations{
     public void publisherWiseAuthor() {
         try {
             statement = connection.createStatement();
-            resultSet = statement.executeQuery("select a.publisher, b.author from book b inner join book a where a.id = b.id;");
+            resultSet = statement.executeQuery("select a.publisher, b.author from book b inner join book a where a.id = b.id order by a.publisher");
 
             System.out.printf("%-15s" +"%-15s"  +'\n',"PUBLISHER", "AUTHOR" );
 
