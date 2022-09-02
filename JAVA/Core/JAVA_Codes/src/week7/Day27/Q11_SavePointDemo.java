@@ -16,6 +16,7 @@ class SavepointRollback {
     void commitRollback() {
         try {
             Scanner scanner = new Scanner(System.in);
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms", "root", "zulfa123");
             connection.setAutoCommit(false);
 
@@ -58,6 +59,8 @@ class SavepointRollback {
             connection.close();
 
         } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }

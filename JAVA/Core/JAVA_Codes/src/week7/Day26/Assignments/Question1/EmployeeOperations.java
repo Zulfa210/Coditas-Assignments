@@ -9,12 +9,21 @@ import java.sql.*;
  */
 public class EmployeeOperations {
     Connection connection;
+
+    {
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms", "root", "zulfa123");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    ;
     Statement statement;
     ResultSet resultSet;
 
      void addRecords(Employee employee){
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms", "root", "zulfa123");
 
 
             PreparedStatement preparedStatement = connection.prepareStatement("insert into employee values (?,?,?,?,?,?,?)");
@@ -58,7 +67,6 @@ public class EmployeeOperations {
 
     void alterTable(){
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms", "root", "zulfa123");
             statement = connection.createStatement();
 
             PreparedStatement preparedStatement = connection.prepareStatement("alter table employee add city varchar(30)");
@@ -98,7 +106,6 @@ public class EmployeeOperations {
     void case4ShowEmployee(){
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms", "root", "zulfa123");
             statement = connection.createStatement();
 
            resultSet = statement.executeQuery("select * from employee where city like 'Pune' and salary>30000");
@@ -120,7 +127,6 @@ public class EmployeeOperations {
 
     void updateSalary(){
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms", "root", "zulfa123");
             System.out.println("\nBefore Updation: ");
             showRecords();
             PreparedStatement preparedStatement = connection.prepareStatement("update employee set salary = salary+1000 where experience>3");
@@ -136,7 +142,6 @@ public class EmployeeOperations {
 
     void deleteEmployeesWhoLeft(){
          try{
-        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms", "root", "zulfa123");
         System.out.println("\nBefore Updation: ");
         showRecords();
         PreparedStatement preparedStatement = connection.prepareStatement("delete from employee where status like 'left'");

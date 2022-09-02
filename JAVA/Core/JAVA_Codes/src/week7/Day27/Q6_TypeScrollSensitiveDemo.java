@@ -54,6 +54,14 @@ class CheckSensitivity{
 
     }
 
+
+}
+
+class Insensitive{
+
+    Connection connection;
+    ResultSet resultSet;
+    Scanner scanner = new Scanner(System.in);
     void checkTypeScrollInsensitive(){
         try {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cms", "root", "zulfa123");
@@ -91,10 +99,6 @@ class CheckSensitivity{
         }
     }
 }
-
-class Insensitive{
-
-}
 public class Q6_TypeScrollSensitiveDemo {
     public static void main(String[] args) {
 
@@ -116,7 +120,7 @@ public class Q6_TypeScrollSensitiveDemo {
                     break;
 
                 case 2:
-                    new CheckSensitivity().checkTypeScrollInsensitive();
+                    new Insensitive().checkTypeScrollInsensitive();
                     break;
 
                 default:
