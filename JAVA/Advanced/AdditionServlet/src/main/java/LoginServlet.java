@@ -27,16 +27,14 @@ public class LoginServlet extends HttpServlet {
 //        requestDispatcher.include(req,resp);
         PrintWriter out = resp.getWriter();
         out.println("<html>" + "<body>" + "<form id ='f1' action=\"Addition\" method=\"post\" >");
-    out.println("<label>First Number</label>");
-    out.println("<input type='text' placeholder='Enter First Number' name='firstNumber'>");
-    out.println("<br><label>Second Number</label>");
-    out.println("<input type=\"text\" placeholder=\"Enter Second Number\" name=\"secondNumber\">");
-    out.println("<input type=\"submit\" value=\"ADD\">");
-    out.println("</form></body></html>");
+        out.println("<label>First Number</label>");
+        out.println("<input type='text' placeholder='Enter First Number' name='firstNumber'>");
+        out.println("<br><label>Second Number</label>");
+        out.println("<input type=\"text\" placeholder=\"Enter Second Number\" name=\"secondNumber\">");
+        out.println("<input type=\"submit\" value=\"ADD\">");
+        out.println("</form></body></html>");
 
-
-
-
+        String s = "new";
 
     }
 }
