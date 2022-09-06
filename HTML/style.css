@@ -1,0 +1,26 @@
+#title {
+    color: red;
+}
+
+.subtitle {
+    color : blue;
+}
+
+#contact-us {
+    color: green;
+}
+
+#services {
+    color:green;
+}
+
+li:first-child{
+    color: aqua;
+}
+li:nth-child(2){
+    color :steelblue;
+}
+li:nth-child(3){
+    color :green;
+}
+
