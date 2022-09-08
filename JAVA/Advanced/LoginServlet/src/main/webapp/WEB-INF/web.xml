@@ -5,15 +5,49 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+  <context-param>
+    <param-name>ApplicationName</param-name>
+    <param-value>My Application</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>Driver</param-name>
+    <param-value>com.mysql.jdbc.Driver</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>URL</param-name>
+    <param-value>jdbc:mysql://localhost:3306/studentdb</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>username</param-name>
+    <param-value>root</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>zulfa123</param-value>
+  </context-param>
+
   <servlet>
     <servlet-name>Login</servlet-name>
     <servlet-class>LoginServlet</servlet-class>
+    <init-param>
+      <param-name>pageName</param-name>
+      <param-value>Welcome Page</param-value>
+    </init-param>
   </servlet>
 
   <servlet>
     <servlet-name>Bye</servlet-name>
     <servlet-class>ByeServlet</servlet-class>
+    <init-param>
+      <param-name>pageName</param-name>
+      <param-value>Bye Page</param-value>
+    </init-param>
   </servlet>
+
 
   <servlet-mapping>
     <servlet-name>Bye</servlet-name>

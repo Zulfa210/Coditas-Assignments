@@ -7,10 +7,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
+import javax.servlet.annotation.WebServlet;
 
 /**
  * @author Zulfa Attar
  */
+@WebServlet("/Login")
 public class LoginServlet extends HttpServlet {
     Connection connection;
     Statement statement;
@@ -22,11 +24,17 @@ public class LoginServlet extends HttpServlet {
         String pass = req.getParameter("password");
         PrintWriter writer = resp.getWriter();
 
-        ServletConfig servletConfig = getServletConfig();
-        String pageName = servletConfig.getInitParameter("pageName");
+        String pageName = "Welcome Page";
 
+        getServletContext().setAttribute("ApplicationName", "My Application");
+        getServletContext().setAttribute("Driver", "com.mysql.jdbc.Driver");
+        getServletContext().setAttribute("URL", "jdbc:mysql://localhost:3306/studentdb");
+        getServletContext().setAttribute("username", "root");
+        getServletContext().setAttribute("password", "zulfa123");
+        getServletContext().setAttribute("Username", name);
         ServletContext servletContext = getServletContext();
-        String applicationName = servletContext.getInitParameter("ApplicationName");
+
+        String applicationName = (String) servletContext.getAttribute("ApplicationName");
 
         writer.println("<center><h1>" + applicationName + "</h1></center>");
         writer.println("<center><h2>" + pageName + "</h2></center>");
@@ -40,10 +48,10 @@ public class LoginServlet extends HttpServlet {
 
         try {
 
-            String className = servletContext.getInitParameter("Driver");
-            String url = servletContext.getInitParameter("URL");
-            String userName = servletContext.getInitParameter("username");
-            String password = servletContext.getInitParameter("password");
+            String className = (String) servletContext.getAttribute("Driver");
+            String url = (String) servletContext.getAttribute("URL");
+            String userName = (String) servletContext.getAttribute("username");
+            String password = (String) servletContext.getAttribute("password");
 
             Class.forName(className);
             connection = DriverManager.getConnection(url,userName, password);
@@ -64,7 +72,8 @@ public class LoginServlet extends HttpServlet {
                         +"<td>" + resultSet.getString(6) +"</td>" ) ;
                 writer.println("</tr>");
             }
-            writer.println("</table></center");
+            writer.println("</table></center>");
+            writer.println("<input type='submit' value= 'Bye'>");
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -73,7 +82,8 @@ public class LoginServlet extends HttpServlet {
         }
 
 
-        writer.println("<input type = 'submit' value= 'Bye'>");
+
         writer.println("</form></body></html>");
     }
 }
+
