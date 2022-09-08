@@ -55,6 +55,7 @@ public class LoginServlet extends HttpServlet {
 
             Class.forName(className);
             connection = DriverManager.getConnection(url,userName, password);
+            getServletContext().setAttribute("connection", connection);
             statement = connection.createStatement();
             resultSet = statement.executeQuery("Select * from student");
 
@@ -85,5 +86,7 @@ public class LoginServlet extends HttpServlet {
 
         writer.println("</form></body></html>");
     }
+
+
 }
 

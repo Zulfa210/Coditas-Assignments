@@ -50,7 +50,7 @@ public class StudentOperations{
             preparedStatement.setString(5, student.studentCity);
             preparedStatement.setString(6, student.studentGender);
 
-            preparedStatement.executeUpdate();;
+            preparedStatement.executeUpdate();
 
 
         } catch (SQLException e) {

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+  border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password],  input[type=number]{
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+input[type=submit]{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+}
+    </style>
+</head>
+<body><center>
+<form name = "f1" method="post" action="Register">
+    First Name: <input type="text" name = "firstname" required><br>
+    Last Name: <input type="text" name = "lastname" required><br>
+    Password: <input type="password" name="password" required><br>
+    Mobile no.: <input type="number" name="mobileno" required><br>
+    City: <input type="text" name = "city" required><br>
+    Education: <input type="text" name = "education" required><br>
+
+    <input type="submit" value="REGISTER">
+    <input type="reset" value="RESET">
+    <a href="LoginServlet"> Click here to Login </a>
+</form></center>
+
+</body>
+</html>
