@@ -26,6 +26,9 @@ public class WelcomeServlet extends HttpServlet {
         String name= req.getParameter("username");
         String password = req.getParameter("password");
 
+            getServletContext().setAttribute("Username", name);
+            getServletContext().setAttribute("userPassword", password);
+
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("Select * from candidate");
 
@@ -36,7 +39,7 @@ public class WelcomeServlet extends HttpServlet {
 
 
             if (name.equals(resultSet.getString(1)) &&
-                    (password.equals(resultSet.getString(2))) {
+                    (password.equals(resultSet.getString(6)))) {
 
 
                 flag = 1;

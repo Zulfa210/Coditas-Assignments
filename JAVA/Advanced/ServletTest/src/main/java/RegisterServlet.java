@@ -48,8 +48,9 @@ public class RegisterServlet extends HttpServlet {
 
             int c = preparedStatement.executeUpdate();
             System.out.println(c);
+            out.println("<center><h2>Registration Successful!</h2><center>");
             RequestDispatcher rd = req.getRequestDispatcher("LoginServlet");
-            rd.forward(req, resp);
+            rd.include(req, resp);
         }else{
             RequestDispatcher rd = req.getRequestDispatcher("/index.html");
             rd.include(req,resp);
