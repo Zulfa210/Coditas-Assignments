@@ -23,7 +23,7 @@ public class EmployeeDao {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employeedb", "root", "zulfa123");
 
              // Step 2:Create a statement using connection object
-             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
             preparedStatement.setInt(1, employee.getId());
             preparedStatement.setString(2, employee.getFirstName());
             preparedStatement.setString(3, employee.getLastName());
@@ -32,8 +32,6 @@ public class EmployeeDao {
             preparedStatement.setString(6, employee.getAddress());
             preparedStatement.setString(7, employee.getContact());
 
-            System.out.println(preparedStatement);
-            // Step 3: Execute the query or update query
             result = preparedStatement.executeUpdate();
 
         } catch (SQLException e) {

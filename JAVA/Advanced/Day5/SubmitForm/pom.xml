@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>RegistrationForm</artifactId>
+  <artifactId>SubmitForm</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>RegistrationForm Maven Webapp</name>
+  <name>SubmitForm Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -53,7 +53,7 @@
   </dependencies>
 
   <build>
-    <finalName>RegistrationForm</finalName>
+    <finalName>SubmitForm</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        td{
+        padding-left:20px;
+        }
+    </style>
+</head>
+<body>
+<div align="center" style="border: 2px solid black; width: 40%; margin-left:400px; padding-bottom:20px">
+<h1>My Form</h1>
+<form action = "Register" method="post" >
+ <table style="font-size:20px">
+     <tr>
+         <td>Name</td>
+         <td><input type="text" name = "name" placeholder="Enter your name"></td>
+     </tr>
+     <tr>
+         <td>Password</td>
+         <td><input type="password" name = "password" placeholder="Enter your password"></td>
+     </tr>
+     <tr>
+         <td>Email</td>
+         <td><input type="email" name = "email" placeholder="Enter your email"></td>
+     </tr>
+     <tr>
+         <td>Select Your Gender</td>
+         <td><input type="radio" name = "gender" value="male">Male
+             <input type="radio" name = "gender" value="female">Female</td>
+     </tr>
+     <tr>
+         <td>Select Your Course</td>
+         <td><select name = "course">
+             <option value = "Java">Java</option>
+             <option value = "Php">Php</option>
+             <option value = "Python">Python</option>
+             <option value = "Android">Android</option>
+         </select></td>
+     </tr>
+     <tr>
+         <td align="right"><input type="checkbox" value="checked" name="condition" ></td>
+         <td>Agree terms and conditions</td>
+     </tr>
+     <tr>
+         <td align="center"><input type="submit" value="Register"></td>
+         <td align="center"><input type="reset" value="Reset"></td>
+     </tr>
+ </table>
+</form>
+</div>
+</form>
+</body>
+</html>
