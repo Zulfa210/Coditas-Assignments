@@ -31,6 +31,7 @@ public class WelcomeServlet extends HttpServlet {
                 }
             }
         }
+
         out.println("<center><h2>Hii " + name1 + "</h2>");
         out.println("<form action='formInfo?name="+username+"&id=" +id+"' method='post' > " +
                 "<input type = 'hidden' name='userName' value='" + username +"'>" +

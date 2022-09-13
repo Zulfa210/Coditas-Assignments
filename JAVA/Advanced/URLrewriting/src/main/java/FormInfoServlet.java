@@ -20,7 +20,8 @@ public class FormInfoServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         resp.setContentType("text/html");
 
-//        resp.setIntHeader("refresh", 5);
+        resp.setIntHeader("refresh", 5);
+
 //        String username = req.getParameter("name");
 //        String id = req.getParameter("id");
 //        out.println("<form action='logOut?name="+username+"&id=" +id+"' method='post' > " +
@@ -57,6 +58,8 @@ public class FormInfoServlet extends HttpServlet {
         out.println("ID : " + req.getParameter("userId") + "</h2>");
 
         HttpSession session = req.getSession();
+
+
         out.println("<br><h3>Data from HttpSession: <br></h3>");
         out.println("<h2> Name : " + session.getAttribute("sessionName") + "<br>");
         out.println("ID : " + session.getAttribute("sessionId") + "</h2>");
