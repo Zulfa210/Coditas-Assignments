@@ -1,3 +1,4 @@
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -29,6 +30,7 @@ public class FormInfoServlet extends HttpServlet {
 //                "<input type = 'hidden' name='userId' value='" + id +"' align = right>");
         out.println("<a href='logOut' style='height:30px; width:100px background-color:blue;' align='right'>LOGOUT</a>");
 
+
         out.println("<br><h3>Data from Cookies: <br></h3>");
         String name1= null, id1 = null;
         Cookie cookies[] = req.getCookies();
@@ -48,6 +50,8 @@ public class FormInfoServlet extends HttpServlet {
             out.println("<h2> Name : " +name1 + "<br>");
             out.println("ID : " + id1 + "</h2>");
         }
+
+
 
         out.println("<br><h3>Data from URL Rewriting: <br></h3>");
         out.println("<h2> Name : " + req.getParameter("name") + "<br>");
