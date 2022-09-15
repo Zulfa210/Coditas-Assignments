@@ -1,7 +1,8 @@
+package Operations;
+
 import ConnectionMaker.ConnectionMaker;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,31 +15,26 @@ import java.sql.*;
 /**
  * @author Zulfa Attar
  */
-@WebServlet("/updateUsername")
-public class UpdateUsernameServlet extends HttpServlet {
+@WebServlet("/delete")
+public class DeleteServlet extends HttpServlet {
     Connection connection;
     Statement statement;
     ResultSet resultSet;
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
-
-        ServletContext application = req.getServletContext();
-
-        int id = (int) application.getAttribute("id");
-
-        String name = req.getParameter("username");
+        int id = Integer.parseInt(req.getParameter("id"));
 
         try {
             connection = ConnectionMaker.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement("update employee set username = ? where id = ?");
-            preparedStatement.setString(1, name);
-            preparedStatement.setInt(2,id);
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from employee where id = ?");
+            preparedStatement.setInt(1,id);
             preparedStatement.executeUpdate();
 
-            out.println("Updated Data SuccessFully Successfully");
+            out.println("Deleted SuccessFully Successfully");
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("showAll");
             requestDispatcher.include(req, resp);
 

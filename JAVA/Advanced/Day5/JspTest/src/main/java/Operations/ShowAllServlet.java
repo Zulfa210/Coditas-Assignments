@@ -1,3 +1,5 @@
+package Operations;
+
 import ConnectionMaker.ConnectionMaker;
 
 import javax.servlet.ServletException;
@@ -52,9 +54,10 @@ public class ShowAllServlet extends HttpServlet {
                         "</tr>"
                 );
             }
-            out.println("</table>");
+            out.println("</table><br>");
             out.println("<a href = 'InsertData.html' ><button type = 'button'>Insert Employee</button></a>");
             out.println("<a href = 'DeleteData.html' ><button type = 'button'>Delete Employee</button></a>");
+            out.println("<a href = 'logOut' ><button type = 'button'>LogOut</button></a>");
 
 
         } catch (SQLException e) {

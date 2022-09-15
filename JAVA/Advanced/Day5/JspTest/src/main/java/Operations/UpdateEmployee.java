@@ -1,3 +1,5 @@
+package Operations;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,8 +24,11 @@ public class UpdateEmployee extends HttpServlet {
         ServletContext application = req.getServletContext();
 
         application.setAttribute("id", id);
-        out.println("<a href='UpdateData.html?id="+ id+"'> Update Name </a><br>");
-        out.println("<a href='UpdateUsername.html?id=" +id+ "'> Update Username </a><br>");
-        out.println("<a href='UpdateCity.html?id="+id+"'> Update City </a><br>");
+        out.println("<center><a href='UpdateData.html?id="+ id+"'> " +
+                "<button type='button'>Update Name </button></a><br>");
+        out.println("<a href='UpdateUsername.html?id=" +id+ "'>  " +
+                "<button type='button'>Update Username </button></a><br>");
+        out.println("<a href='UpdateCity.html?id="+id+"'>  " +
+                "<button type='button'>Update City </button></a><br><center>");
     }
 }

@@ -1,3 +1,5 @@
+package Operations;
+
 import ConnectionMaker.ConnectionMaker;
 
 import javax.servlet.ServletException;
@@ -48,7 +50,7 @@ public class ShowUserServlet extends HttpServlet {
                 );
             }
             out.println("</table>");
-            out.println("<a href = 'logOut' ><button type = 'button'>LogOut</button></a>");
+            out.println("<a href = 'logOut' ><button type = 'button'>Operations.LogOut</button></a>");
 
 
         } catch (SQLException e) {
