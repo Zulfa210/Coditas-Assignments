@@ -8,10 +8,10 @@
     </bean>
 
     <bean id="address" class="Address">
-        <constructor-arg name="streetName" value="Golf Club Road"></constructor-arg>
-        <constructor-arg name="cityName" value="Pune"></constructor-arg>
-        <constructor-arg name="stateName" value="Maharashtra"></constructor-arg>
-        <constructor-arg name="pincode" value="411006"></constructor-arg>
+        <constructor-arg value="Golf Club Road"></constructor-arg>
+        <constructor-arg value="Pune"></constructor-arg>
+        <constructor-arg value="Maharashtra"></constructor-arg>
+        <constructor-arg value="411006"></constructor-arg>
     </bean>
     <bean id ="student" class="Student">
         <property name="id" value="11"></property>
