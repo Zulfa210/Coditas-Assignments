@@ -1,0 +1,13 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id = "triangle1" class="Triangle">
+        <property name="height" value="5.5"></property>
+        <property name="base" value="8.8"></property>
+        <property name="name" value="My Triangle"></property>
+    </bean>
+
+
+</beans>

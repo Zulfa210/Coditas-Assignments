@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04b3e6d2-3ad8-42fe-985e-3af8aecf337c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/src/main/java/HelloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/src/main/java/MainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/src/main/resources/SpringConfiguration.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Day5/SpringFirst/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/ServletJspProject/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/ServletJspProject/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project/ServletJspProject/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/src/main/java/AreaClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/src/main/java/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/src/main/java/MainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/src/main/java/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/src/main/java/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/src/main/resources/CircleBean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/src/main/resources/RectangleBean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/src/main/resources/SpringBean.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Framework/Spring/Day1/ShapeSpring/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day5/JspTest/src/main/java/Operations/LogOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Day5/JspTest/src/main/java/Operations/LogOut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day5/JspTest/src/main/java/Operations/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Day5/JspTest/src/main/java/Operations/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day5/JspTest/src/main/java/Operations/ShowAllServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Day5/JspTest/src/main/java/Operations/ShowAllServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day5/JspTest/src/main/java/Operations/ShowUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Day5/JspTest/src/main/java/Operations/ShowUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day5/JspTest/src/main/webapp/InsertData.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Day5/JspTest/src/main/webapp/InsertData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day5/JspTest/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Day5/JspTest/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day5/JspTest/target/classes/Operations/LogOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Day5/JspTest/target/classes/Operations/LogOut.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day5/JspTest/target/classes/Operations/ShowAllServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Day5/JspTest/target/classes/Operations/ShowAllServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Day5/JspTest/target/classes/Operations/ShowUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Day5/JspTest/target/classes/Operations/ShowUserServlet.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2EqRAZaeDnJZh3iKhZzDJ85SnYB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04b3e6d2-3ad8-42fe-985e-3af8aecf337c" name="Changes" comment="" />
+      <created>1663320986277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663320986277</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

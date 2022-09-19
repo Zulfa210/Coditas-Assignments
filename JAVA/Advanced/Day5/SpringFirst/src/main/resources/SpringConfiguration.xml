@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id = "hello" class="HelloWorld">
+        <property name="name" value="Coditas"></property>
+    </bean>
+
+    <bean id="address" class="Address">
+        <constructor-arg name="streetName" value="Golf Club Road"></constructor-arg>
+        <constructor-arg name="cityName" value="Pune"></constructor-arg>
+        <constructor-arg name="stateName" value="Maharashtra"></constructor-arg>
+        <constructor-arg name="pincode" value="411006"></constructor-arg>
+    </bean>
+    <bean id ="student" class="Student">
+        <property name="id" value="11"></property>
+        <property name="name" value="Zulfa Attar"></property>
+        <property name="address" ref="address"></property>
+    </bean>
+
+</beans>
