@@ -23,26 +23,30 @@ public class FileInputServlet extends HttpServlet {
 
         String csvFileName = file.getSubmittedFileName();
 
-        System.out.println("Selected File Name: " + csvFileName);
-        String uploadPath = "C:/Users/Coditas/Desktop/Coditas-Assignments/JAVA/Advanced/CSVtoExcel/" + csvFileName;
-        System.out.println(uploadPath);
+        int dot = csvFileName.indexOf(".");
+        String extension = csvFileName.substring(dot + 1, csvFileName.length());
+
+        if (extension.equalsIgnoreCase("CSV")) {
+            System.out.println("Selected File Name: " + csvFileName);
+            String uploadPath = "C:/Users/Coditas/Desktop/Coditas-Assignments/JAVA/Advanced/CSVtoExcel/" + csvFileName;
+            System.out.println(uploadPath);
 
 
-        try {
-            FileOutputStream fos = new FileOutputStream(uploadPath);
-            InputStream inputStream = file.getInputStream();
+            try {
+                FileOutputStream fos = new FileOutputStream(uploadPath);
+                InputStream inputStream = file.getInputStream();
 
-            byte[] data = new byte[inputStream.available()];
-            inputStream.read(data);
-            fos.write(data);
-            fos.close();
-            System.out.println("File added Successfully");
-            new ConvertCsvToExcel().csvToExcel(uploadPath);
+                byte[] data = new byte[inputStream.available()];
+                inputStream.read(data);
+                fos.write(data);
+                fos.close();
+                System.out.println("File added Successfully");
+                new ConvertCsvToExcel().csvToExcel(uploadPath);
 
-            HttpSession session = req.getSession();
-            session.setAttribute("filename", csvFileName);
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("DisplayFile");
-            requestDispatcher.forward(req,resp);
+                HttpSession session = req.getSession();
+                session.setAttribute("filename", csvFileName);
+                RequestDispatcher requestDispatcher = req.getRequestDispatcher("DisplayFile");
+                requestDispatcher.forward(req, resp);
 //            Class.forName("com.mysql.jdbc.Driver");
 //            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/imageProject", "root", "zulfa123");
 //            PreparedStatement preparedStatement = connection.prepareStatement("insert into saveImage (image_name) values (?)");
@@ -56,10 +60,12 @@ public class FileInputServlet extends HttpServlet {
 //                System.out.println("Failed to Upload Image");
 //            }
 
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
+        } else {
+
+        }
     }
 }

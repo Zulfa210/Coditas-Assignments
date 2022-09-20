@@ -7,10 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Iterator;
 
 /**
@@ -29,23 +26,40 @@ public class DisplayFileServlet extends HttpServlet {
             FileInputStream fileInputStream = new FileInputStream(new File(savepath));
 
             req.getRequestDispatcher("index.html").include(req,resp);
-            Workbook workBook = new XSSFWorkbook(fileInputStream);
-            DataFormatter dataFormatter = new DataFormatter();
-            Iterator<Sheet> sheets = workBook.sheetIterator();
+//            Workbook workBook = new XSSFWorkbook(fileInputStream);
+//            DataFormatter dataFormatter = new DataFormatter();
+//            Iterator<Sheet> sheets = workBook.sheetIterator();
+//
+//            while (sheets.hasNext()) {
+//                Sheet sh = sheets.next();
+//                out.println("<h3>File Converted</h3>");
+//                Iterator<Row> iterator = sh.iterator();
+//                Row row = iterator.next();
+//                Iterator<Cell> cellIterator = row.iterator();
+//                while (cellIterator.hasNext()) {
+//                    Cell cell = cellIterator.next();
+//                    String cellValue = dataFormatter.formatCellValue(cell);
+//                    out.println(cellValue + " ");
+//                }
+//                out.println("<br>");
+//            }
 
-            while (sheets.hasNext()) {
-                Sheet sh = sheets.next();
-                out.println("<h3>File Converted</h3>");
-                Iterator<Row> iterator = sh.iterator();
-                Row row = iterator.next();
-                Iterator<Cell> cellIterator = row.iterator();
-                while (cellIterator.hasNext()) {
-                    Cell cell = cellIterator.next();
-                    String cellValue = dataFormatter.formatCellValue(cell);
-                    out.println(cellValue + " ");
+                  String getData = null;
+                 BufferedReader bufferedReader1 = new BufferedReader(new FileReader(savepath));
+                out.println("<div style=\"width:70%; padding-left:500px; border:2px solid black\">" +
+                        "<table border='2'><tbody>");
+
+                while((getData=bufferedReader1.readLine())!=null)
+                {
+                    String s[]=getData.split(" ");
+                    out.println("<tr>");
+                    for(int i=0;i<s.length;i++) {
+                        out.println("<td>"+s[i]+"</td>");
+                    }
+                    out.println("</tr>");
                 }
-                out.println("<br>");
-            }
+                out.println("</tbody></table></div");
+
         }catch (Exception e){
             e.printStackTrace();
         }

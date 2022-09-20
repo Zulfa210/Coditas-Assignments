@@ -10,7 +10,6 @@ public class MainApplication2 {
         ApplicationContext a = new ClassPathXmlApplicationContext("getBean.xml");
 
 
-
         System.out.println("===============================");
         Employee employee1 = (Employee) a.getBean("employee");
         System.out.println(employee1);
@@ -21,7 +20,7 @@ public class MainApplication2 {
         Address address = employee2.getEmployeeAddress();
 
         System.out.println("===============================");
-        Employee employee4 = (Employee) a.getBean("employee", Employee.class);
+        Employee employee4 = a.getBean("employee", Employee.class);
         System.out.println(employee4);
 
         System.out.println("===============================");
