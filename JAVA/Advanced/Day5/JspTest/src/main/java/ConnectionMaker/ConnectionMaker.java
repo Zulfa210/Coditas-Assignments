@@ -10,7 +10,6 @@ import java.sql.SQLException;
 public class ConnectionMaker implements ConnectionParamters{
     static Connection connection = null;
     private ConnectionMaker(){
-
     }
 
     public static Connection getConnection(){

@@ -52,8 +52,6 @@ ResultSet resultSet;
                         requestDispatcher.forward(req, resp);
                     }
                     else if(resultSet.getString(6).equals("user")){
-                        session.setAttribute("username",username );
-                        session.setAttribute("password",password );
                         session.setAttribute("name",resultSet.getString(2) );
                         session.setAttribute("address",resultSet.getString(5) );
                         session.setAttribute("id", resultSet.getInt(1));

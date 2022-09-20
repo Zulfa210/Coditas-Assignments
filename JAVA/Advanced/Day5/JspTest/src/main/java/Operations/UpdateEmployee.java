@@ -22,9 +22,9 @@ public class UpdateEmployee extends HttpServlet {
         PrintWriter out = resp.getWriter();
         int id = Integer.parseInt(req.getParameter("id"));
         ServletContext application = req.getServletContext();
-
         application.setAttribute("id", id);
-        out.println("<center><a href='UpdateData.html?id="+ id+"'> " +
+
+        out.println("<center><a href='UpdateName.html?id="+ id+"'> " +
                 "<button type='button'>Update Name </button></a><br>");
         out.println("<a href='UpdateUsername.html?id=" +id+ "'>  " +
                 "<button type='button'>Update Username </button></a><br>");

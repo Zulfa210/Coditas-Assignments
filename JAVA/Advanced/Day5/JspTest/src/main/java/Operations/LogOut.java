@@ -19,15 +19,8 @@ public class LogOut extends HttpServlet {
         HttpSession session = req.getSession();
 
         session.invalidate();
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("index.html");
-        requestDispatcher.forward(req, resp);
+        resp.sendRedirect("index.html");
 
-//        if (session == null || session.getAttribute("username") == null) {
-//            resp.sendRedirect("index.html"); // No logged-in user found, so redirect to login page.
-//        } else {
-//            resp.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
-//            resp.setHeader("Pragma", "no-cache"); // HTTP 1.0.
-//            resp.setDateHeader("Expires", 0);
-//        }
+
     }
 }

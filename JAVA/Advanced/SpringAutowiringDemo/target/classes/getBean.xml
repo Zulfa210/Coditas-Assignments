@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="address" class="Address">
+        <property name="houseName" value="Employee House"></property>
+        <property name="city" value="Pune"></property>
+        <property name="state" value="Maharashtra"></property>
+    </bean>
+
+
+    <bean id="employee" class="Employee" scope="prototype">
+        <constructor-arg name="employeeId" value="12"></constructor-arg>
+        <constructor-arg name="employeeName" value="Ram"></constructor-arg>
+        <constructor-arg name="employeeAddress" ref="address"></constructor-arg>
+    </bean>
+</beans>

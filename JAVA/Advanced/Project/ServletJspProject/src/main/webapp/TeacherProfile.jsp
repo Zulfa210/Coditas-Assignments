@@ -10,8 +10,26 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+ul{
+background-color:#9DE7CD;
+
+}
+li{
+margin:auto;
+color:#19194F;
+}
+body{
+background-color:#C3ED82;
+}
+
+td, th{
+padding: 2px 10px 5px 10px;
+}
+</style>
+
 <%
-         String username = (String) session.getAttribute("username" );
+                 String username = (String) session.getAttribute("username" );
                  String password = (String) session.getAttribute("password" );
                  int id =   (int) session.getAttribute("id");
                  String name = (String) session.getAttribute("name");
@@ -25,13 +43,13 @@
 %>
 </head>
 <body>
-<ul class="nav nav-pills mb-3 ms-auto" id="pills-tab" role="tablist" style="padding:30px 5px 0px 5px">
+<ul class="nav nav-pills mb-3 ms-auto" id="pills-tab" role="tablist" style="padding:20px 5px 0px 5px">
     <li class="nav-item">
         <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">
             <img src="images/<%= photo %>" style="border-radius:50%" width="100px" height="100px" alt = "zulfa"></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+        <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="true">Profile</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" id="pills-aboutme-tab" data-toggle="pill" href="#pills-aboutme" role="tab" aria-controls="pills-aboutme" aria-selected="false">About me</a>
@@ -47,11 +65,11 @@
     </li>
     <li class="nav-item ml-auto">
         <form method="post" action="Logout" align="right">
-            <input class="btn btn-success"  type="submit" value="Logout">
-        </form>
+                    <input class="btn btn-success"  type="submit" value="Logout">
+                </form>
     </li>
 </ul>
-<div class="tab-content" id="pills-tabContent">
+<div class="tab-content" id="pills-tabContent" style="padding:5px 50px 20px 50px">
 
     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
         <table>
@@ -99,24 +117,30 @@
 <h2>Teacher Hierarchy</h2>
 <table>
 <tr>
-<th>Teachers</th>
-<th>Student Name</th>
+<th>Teacher Name</th>
+<th>Students</th>
 </tr>
 <tr>
-<td><%= name %></td>
-<td>============></td>
+<td><%= name %>
+<br>
+<img src="images/<%= photo %>" style="border-radius:80%" width="100px" height="100px">
+</td>
+<td></td>
 </tr>
 <%
 Connection connection = ConnectionMaker.getConnection();
 try {
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select s.name from teacher t inner join studentTeacher st on t.id = st.teacher_id inner join student s on st.student_id = s.id where t.id=" + id);
+            ResultSet resultSet = statement.executeQuery("select s.name,s.profile_photo from teacher t inner join studentTeacher st on t.id = st.teacher_id inner join student s on st.student_id = s.id where t.id=" + id);
 
             while(resultSet.next()) {
                 %>
            <tr>
-           <td></td>
-           <td><%= resultSet.getString(1) %></td>
+           <td>============></td>
+           <td><%= resultSet.getString(1) %>
+           <br>
+           <img src="images/<%= resultSet.getString(2) %>" style="border-radius:80%" width="90px" height="90px" >
+           </td>
            </tr>
 
 <%
@@ -133,7 +157,9 @@ try {
 
 </div>
     <div class="tab-pane fade" id="pills-course" role="tabpanel" aria-labelledby="pills-course-tab">
-        <h2>My courses</h2>
+        <h2>My courses</h2><a href="AddCourse.html">
+                                           <button type = "submit" >Add Course</button>
+                                           </a>
          <table border = 1>
                 <tr>
                 <th>Course Name</th>
@@ -171,9 +197,7 @@ try {
 
                 </table>
 
-                <form action="AddCourse" method = "post">
-                <input type = "submit" value="Add Course">
-                </form>
+
     </div>
 </div>
 </body>

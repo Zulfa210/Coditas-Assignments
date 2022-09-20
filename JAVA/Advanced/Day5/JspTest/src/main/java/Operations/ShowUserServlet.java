@@ -70,40 +70,5 @@ public class ShowUserServlet extends HttpServlet {
         }
     }
 
-//    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        resp.setContentType("text/html");
-//        HttpSession session = req.getSession();
-//        PrintWriter out = resp.getWriter();
-//        try {
-//
-//            connection = ConnectionMaker.getConnection();
-//            statement = connection.createStatement();
-//            int id = (int)(req.getSession().getAttribute("id"));
-//            resultSet = statement.executeQuery("select * from employee where id =" + id);
-//            out.println("<table border = '1'>");
-//            out.println("<tr>" +
-//                    "<td>ID</td> " +
-//                    "<td>Name</td> " +
-//                    "<td>Username</td> " +
-//                    "<td>Address</td> " +
-//                    "</tr>");
-//            while (resultSet.next()){
-//
-//                out.println("<tr>" +
-//                        "<td>" + resultSet.getInt(1) + "</td>" +
-//                        "<td>" + resultSet.getString(2) + "</td>" +
-//                        "<td>" + resultSet.getString(3) + "</td>" +
-//                        "<td>" + resultSet.getString(5) + "</td>" +
-//                        "</tr>"
-//                );
-//            }
-//            out.println("</table>");
-//            out.println("<a href = 'logOut' ><button type = 'button'>Logout</button></a>");
-//
-//
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
+
 }

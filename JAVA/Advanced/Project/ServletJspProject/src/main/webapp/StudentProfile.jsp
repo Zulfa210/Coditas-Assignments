@@ -25,25 +25,25 @@
 %>
 </head>
 <body>
-<ul class="nav nav-pills mb-3 ms-auto" id="pills-tab" role="tablist" style="padding:30px 5px 0px 5px">
+<ul class="nav nav-pills mb-3 ms-auto" id="pills-tab" role="tablist" style="padding:30px 5px 0px 5px;background-color:lightblue">
     <li class="nav-item">
         <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="false">
             <img src="images/<%= photo %>" style="border-radius:50%" width="100px" height="100px" alt = "zulfa"></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+        <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="true">Profile</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-aboutme-tab" data-toggle="pill" href="#pills-aboutme" role="tab" aria-controls="pills-aboutme" aria-selected="false">About me</a>
+        <a class="nav-link active" id="pills-aboutme-tab" data-toggle="pill" href="#pills-aboutme" role="tab" aria-controls="pills-aboutme" aria-selected="true">About me</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-testimonial-tab" data-toggle="pill" href="#pills-testimonial" role="tab" aria-controls="pills-testimonial" aria-selected="false">Testimonial</a>
+        <a class="nav-link active" id="pills-testimonial-tab" data-toggle="pill" href="#pills-testimonial" role="tab" aria-controls="pills-testimonial" aria-selected="false">Testimonial</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-hierarchy-tab" data-toggle="pill" href="#pills-hierarchy" role="tab" aria-controls="pills-hierarchy" aria-selected="false">Hierarchy</a>
+        <a class="nav-link active" id="pills-hierarchy-tab" data-toggle="pill" href="#pills-hierarchy" role="tab" aria-controls="pills-hierarchy" aria-selected="false">Hierarchy</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" id="pills-course-tab" data-toggle="pill" href="#pills-course" role="tab" aria-controls="pills-course" aria-selected="false">Courses</a>
+        <a class="nav-link active" id="pills-course-tab" data-toggle="pill" href="#pills-course" role="tab" aria-controls="pills-course" aria-selected="false">Courses</a>
     </li>
     <li class="nav-item ml-auto">
         <form method="post" action="Logout" align="right">
@@ -138,12 +138,14 @@
 Connection connection = ConnectionMaker.getConnection();
 try {
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select t.name from teacher t inner join studentTeacher st on t.id = st.teacher_id inner join student s on st.student_id = s.id where s.id=" + id);
+            ResultSet resultSet = statement.executeQuery("select t.name, t.profile_photo from teacher t inner join studentTeacher st on t.id = st.teacher_id inner join student s on st.student_id = s.id where s.id=" + id);
 
             while(resultSet.next()) {
                 %>
            <tr>
-           <td><%= resultSet.getString(1) %></td>
+           <td><%= resultSet.getString(1) %><br>
+           <img src="images/<%= resultSet.getString(2) %>" style="border-radius:80%" width="90px" height="90px" >
+           </td>
            <td></td>
            </tr>
 
@@ -157,8 +159,10 @@ try {
         }
 %>
 <tr>
-<td>===============></td>
-<td><%= name %></td>
+<td>=============></td>
+<td><%= name %><br>
+<img src="images/<%= photo %>" style="border-radius:80%" width="100px" height="100px">
+</td>
 </tr>
 </table>
 </div>
