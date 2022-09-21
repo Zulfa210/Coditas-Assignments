@@ -1,0 +1,42 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:list="http://www.w3.org/1999/xhtml"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd
+   http://www.springframework.org/schema/util
+   http://www.springframework.org/schema/util/spring-util-2.5.xsd"
+>
+
+    <bean id="m1" class="Movie">
+        <property name="movieName" value="Avengers Infinity"></property>
+        <property name="boxOfficeCollection" value="2500"></property>
+        <property name="budget" value="100"></property>
+    </bean>
+
+    <bean id="m2" class="Movie">
+        <property name="movieName" value="Avengers Endgame"></property>
+        <property name="boxOfficeCollection" value="1600"></property>
+        <property name="budget" value="200"></property>
+    </bean>
+
+    <bean id="m3" class="Movie">
+        <property name="movieName" value="The Avengers"></property>
+        <property name="boxOfficeCollection" value="1500"></property>
+        <property name="budget" value="300"></property>
+    </bean>
+
+    <util:set set-class="java.util.HashSet" id="movies" value-type="Movie">
+        <ref bean="m1"></ref>
+        <ref bean="m2"></ref>
+        <ref bean="m3"></ref>
+    </util:set>
+
+    <bean id="director" class="Director" autowire="byName">
+        <property name="directorName" value="Anthony Russo"></property>
+    </bean>
+
+</beans>

@@ -26,23 +26,6 @@ public class DisplayFileServlet extends HttpServlet {
             FileInputStream fileInputStream = new FileInputStream(new File(savepath));
 
             req.getRequestDispatcher("index.html").include(req,resp);
-//            Workbook workBook = new XSSFWorkbook(fileInputStream);
-//            DataFormatter dataFormatter = new DataFormatter();
-//            Iterator<Sheet> sheets = workBook.sheetIterator();
-//
-//            while (sheets.hasNext()) {
-//                Sheet sh = sheets.next();
-//                out.println("<h3>File Converted</h3>");
-//                Iterator<Row> iterator = sh.iterator();
-//                Row row = iterator.next();
-//                Iterator<Cell> cellIterator = row.iterator();
-//                while (cellIterator.hasNext()) {
-//                    Cell cell = cellIterator.next();
-//                    String cellValue = dataFormatter.formatCellValue(cell);
-//                    out.println(cellValue + " ");
-//                }
-//                out.println("<br>");
-//            }
 
                   String getData = null;
                  BufferedReader bufferedReader1 = new BufferedReader(new FileReader(savepath));

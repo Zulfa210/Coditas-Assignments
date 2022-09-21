@@ -1,0 +1,52 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:list="http://www.w3.org/1999/xhtml"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd
+   http://www.springframework.org/schema/util
+   http://www.springframework.org/schema/util/spring-util-2.5.xsd"
+>
+  <context:component-scan base-package="src/main/java/Participants.java"/>
+
+    <context:annotation-config></context:annotation-config>
+
+
+
+    <bean id = "p1" class="Participants">
+        <property name="name" value="Punit"></property>
+        <property name="address" value="Indore"></property>
+    </bean>
+
+    <bean id = "p2" class="Participants">
+        <property name="name" value="Raghav"></property>
+        <property name="address" value="Dehradun"></property>
+    </bean>
+
+    <bean id = "p3" class="Participants">
+        <property name="name" value="Tiger"></property>
+        <property name="address" value="Pune"></property>
+    </bean>
+
+    <util:map id="participants" map-class="java.util.HashMap" key-type="Participants" value-type="java.lang.String">
+        <entry key-ref="p1" value="teamRemo"></entry>
+        <entry key-ref="p2" value="teamTerence"></entry>
+        <entry key-ref="p3" value="teamGeeta"></entry>
+    </util:map>
+
+    <bean id="did" class="DID">
+        <property name="seasonName" value="season2"></property>
+        <property name="brandPartners">
+            <list>
+                <value>Appy Fizz</value>
+                <value>Byju</value>
+                <value>Kia</value>
+            </list>
+
+        </property>
+
+    </bean>
+</beans>
