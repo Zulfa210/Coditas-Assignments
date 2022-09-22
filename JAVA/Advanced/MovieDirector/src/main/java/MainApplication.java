@@ -9,6 +9,8 @@ public class MainApplication {
         ApplicationContext context = new ClassPathXmlApplicationContext("SpringBean.xml");
         Director director = context.getBean("director", Director.class);
         director.Display();
+
+
     }
 }
 

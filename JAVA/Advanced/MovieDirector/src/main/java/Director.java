@@ -1,3 +1,6 @@
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.Resource;
 import java.util.Map;
 import java.util.Set;
 
@@ -20,6 +23,8 @@ public class Director {
         return movies;
     }
 
+    @Resource
+    @Autowired
     public void setMovies(Set<Movie> movies) {
         this.movies = movies;
     }

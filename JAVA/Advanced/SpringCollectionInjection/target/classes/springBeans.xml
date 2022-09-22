@@ -31,21 +31,22 @@
         <property name="address" value="Pune"></property>
     </bean>
 
-    <util:map id="participants" map-class="java.util.HashMap" key-type="Participants" value-type="java.lang.String">
-        <entry key-ref="p1" value="teamRemo"></entry>
-        <entry key-ref="p2" value="teamTerence"></entry>
-        <entry key-ref="p3" value="teamGeeta"></entry>
-    </util:map>
 
-    <bean id="did" class="DID">
+
+    <util:list id="brandPartners" list-class="java.util.ArrayList" value-type="java.lang.String">
+        <value>Appy Fizz</value>
+        <value>Byju</value>
+        <value>Kia</value>
+    </util:list>
+
+    <bean id="did" class="DID" >
         <property name="seasonName" value="season2"></property>
-        <property name="brandPartners">
-            <list>
-                <value>Appy Fizz</value>
-                <value>Byju</value>
-                <value>Kia</value>
-            </list>
-
+        <property name="participants">
+            <util:map id="participants" map-class="java.util.HashMap" key-type="Participants" value-type="java.lang.String">
+                <entry key-ref="p1" value="teamRemo"></entry>
+                <entry key-ref="p2" value="teamTerence"></entry>
+                <entry key-ref="p3" value="teamGeeta"></entry>
+            </util:map>
         </property>
 
     </bean>

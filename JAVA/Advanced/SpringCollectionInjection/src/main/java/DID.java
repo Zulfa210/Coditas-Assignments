@@ -2,6 +2,7 @@ import com.sun.xml.internal.ws.wsdl.writer.document.Part;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -11,7 +12,7 @@ import java.util.Map;
 public class DID {
     private String seasonName;
     private List<String> brandPartners;
-    @Autowired
+
     private Map<Participants, String> participants;
 
     public String getSeasonName() {
@@ -26,6 +27,8 @@ public class DID {
         return brandPartners;
     }
 
+    @Resource
+    @Autowired
     public void setBrandPartners(List<String> brandPartners) {
         this.brandPartners = brandPartners;
     }
@@ -33,8 +36,6 @@ public class DID {
     public Map<Participants, String> getParticipants() {
         return participants;
     }
-    @Autowired
-    @Qualifier(value = "participants")
     public void setParticipants(Map<Participants, String> participants) {
         this.participants = participants;
     }
