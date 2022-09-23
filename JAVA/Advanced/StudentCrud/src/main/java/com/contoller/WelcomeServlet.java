@@ -29,6 +29,7 @@ public class WelcomeServlet extends HttpServlet {
         ApplicationContext context = new ClassPathXmlApplicationContext("SpringBean.xml");
         StudentDao studentDao = context.getBean("student", StudentDao.class);
 
+
         out.println("<table border = '1'>");
         List<Student> studentList = studentDao.fetchAllStudents();
         out.println("<tr>" +
