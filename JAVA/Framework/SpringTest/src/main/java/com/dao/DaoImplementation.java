@@ -29,6 +29,9 @@ public class DaoImplementation implements DaoOperations{
     @Override
     public void createTable() {
 
+         jdbcTemplate.execute("create table Address(id int primary key auto_increment, flat_no int, house_name varchar(50), city varchar(50), pincode int)");
+        jdbcTemplate.execute("create table Employee(id int primary key auto_increment, fname varchar(50), lname varchar(50), salary float, address_id int, foreign key (address_id) references Address(id))");
+
     }
 
     @Override
