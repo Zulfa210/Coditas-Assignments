@@ -187,6 +187,32 @@ public class DaoImplementation implements DaoOperations{
 
     @Override
     public void showSalaryAndMumbai() {
-        
+        String sql = "select * from employee inner join address on employee.address_id = address.id where salary>10000 and address.city like 'Mumbai'";
+        List<Employee> employeeList = jdbcTemplate.query(sql, new RowMapper() {
+            @Override
+            public Object mapRow(ResultSet resultSet, int i) throws SQLException {
+                Employee employee = new Employee();
+                employee.setEmployeeId(resultSet.getInt(1));
+                employee.setEmployeeFirstName(resultSet.getString(2));
+                employee.setEmployeeLastName(resultSet.getString(3));
+                employee.setEmployeeSalary(resultSet.getFloat(4));
+
+                Address address = new Address();
+                address.setAddressId(resultSet.getInt(5));
+                address.setFlatNo(resultSet.getInt(7));
+                address.setHouseName(resultSet.getString(8));
+                address.setCity(resultSet.getString(9));
+                address.setPinCode(resultSet.getInt(10));
+
+                employee.setEmployeeAddress(address);
+
+                return  employee;
+            }
+
+        });
+
+        for (Employee employee: employeeList){
+            System.out.println(employee);
+        }
     }
 }

@@ -22,7 +22,8 @@ public class MainApplication {
             do {
                 employee = new Employee();
                 System.out.println("1. Create Table \n2. Insert Employee \n3. Show All Employees\n4. Show one Employee" +
-                        "\n5. Update Employee\n6. Delete employee\n7. Sort By Firstname\n8.Sort By Last Name\n Enter your choice: ");
+                        "\n5. Update Employee\n6. Delete employee\n7. Sort By Firstname\n8.Sort By Last Name\n" +
+                        "9. Salary greater than 10000 aand city Mumbai\n Enter your choice: ");
                 choice = Integer.parseInt(bufferedReader.readLine());
 
                 switch (choice){
@@ -89,6 +90,9 @@ public class MainApplication {
                     case 8:
                         daoOperations.sortByLastName();
                         break;
+
+                    case 9:
+                        daoOperations.showSalaryAndMumbai();
                     default:
                         System.out.println("Incorrect choice");
                 }
