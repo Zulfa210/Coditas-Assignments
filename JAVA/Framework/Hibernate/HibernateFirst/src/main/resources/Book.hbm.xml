@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.bean.Book">
+        <id name="bookId" >
+            <generator class="increment"></generator>
+        </id>
+        <property name="bookName" column="book_name"></property>
+        <property name="authorName" column="author_name"></property>
+        <property name="price" column="book_price"></property>
+        <property name="publisherName" column="publisher_name"></property>
+    </class>
+</hibernate-mapping>
