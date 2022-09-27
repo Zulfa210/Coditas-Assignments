@@ -4,8 +4,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+
+import org.hibernate.Query;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.List;
 
 /**
  * @author Zulfa Attar
@@ -18,10 +21,11 @@ public class MainApplication {
             System.out.println("Enter Teacher name, designation, city, salary, contact no.: ");
             Teacher teacher = new Teacher();
 
-            teacher.setTeacherName(bufferedReader.readLine());
-            teacher.setTeacherDesignation(bufferedReader.readLine());
-            teacher.setTeacherCity(bufferedReader.readLine());
-            teacher.setTeacherSalary(Float.parseFloat(bufferedReader.readLine()));
+//            teacher.setTeacherName(bufferedReader.readLine());
+//            teacher.setTeacherDesignation(bufferedReader.readLine());
+//            teacher.setTeacherCity(bufferedReader.readLine());
+//            teacher.setTeacherSalary(Float.parseFloat(bufferedReader.readLine()));
+//            teacher.setTeacherContactNo(bufferedReader.readLine());
 
             Configuration configuration = new Configuration();
 
@@ -31,16 +35,23 @@ public class MainApplication {
             Session session = sessionFactory.openSession();
             Transaction transaction = session.beginTransaction();
 
-            int success = (int) session.save(teacher);
+            //int success = (int) session.save(teacher);
 
-            if (success >0){
-                System.out.println("Added Successfully");
-                transaction.commit();
-            }else {
-                System.out.println("Error");
-                transaction.rollback();
+//            if (success >0){
+//                System.out.println("Added Successfully");
+//                transaction.commit();
+//            }else {
+//                System.out.println("Error");
+//                transaction.rollback();
+//            }
+
+                    Query query = session.createQuery("from teacher_new");
+            List<Teacher> li = query.list();
+
+
+            for (Teacher t: li){
+                System.out.println(t);
             }
-
         }catch (Exception e){
 
         }
