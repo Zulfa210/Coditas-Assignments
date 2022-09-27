@@ -87,7 +87,7 @@ public class MainApplication {
 
                     case 5:
                         String str = "ti";
-                        String hqlQuery1 = "from Employee e where e.employee_name like :name";
+                        String hqlQuery1 = "from Employee e where e.employeeName like :name";
                         Query query1 = session.createQuery(hqlQuery1).setParameter("name","%" + str + "%");
                         List<Employee> tiEmployee = query1.list();
                         for(Employee employee1: tiEmployee){
@@ -97,11 +97,13 @@ public class MainApplication {
 
                     case 6:
                         Query query2 = session.createQuery("update Employee set employee_salary = employee_salary + 5000 where employee_salary>20000");
-                        List<Employee> list = query2.list();
+                        query2.executeUpdate();
+                        List<Employee> list = session.createQuery("from Employee").list();
 
                         for (Employee employee1: list){
                             System.out.println(employee1);
                         }
+                        break;
 
                 }
             }while (choice!=0);
