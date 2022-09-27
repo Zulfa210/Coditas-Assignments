@@ -98,6 +98,7 @@ public class MainApplication {
                     case 6:
                         Query query2 = session.createQuery("update Employee set employee_salary = employee_salary + 5000 where employee_salary>20000");
                         query2.executeUpdate();
+                        transaction.commit();
                         List<Employee> list = session.createQuery("from Employee").list();
 
                         for (Employee employee1: list){
