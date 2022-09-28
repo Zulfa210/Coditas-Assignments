@@ -3,9 +3,14 @@ package com.dao;
 import com.bean.Book;
 
 import com.mysql.cj.QueryResult;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projection;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 import org.hibernate.query.Query;
 
 import java.util.List;
@@ -86,5 +91,49 @@ public class DaoOperationsImplementation implements DaoOperations{
         else {
             System.out.println("error");
         }
+    }
+
+    @Override
+    public void fetchByRestriction(String authorName) {
+        Session session = configuration.buildSessionFactory().openSession();
+        Criteria criteria = session.createCriteria(Book.class);
+
+        criteria.add(Restrictions.like("authorName",authorName));
+
+        List<Book> list = (List) criteria.list();
+        for(Book book1: list){
+            System.out.println(book1);
+        }
+    }
+
+    @Override
+    public void fetchByOrder(String order, String propertyName) {
+        Session session = configuration.buildSessionFactory().openSession();
+        Criteria criteria = session.createCriteria(Book.class);
+
+        if(order.equalsIgnoreCase("asc")){
+            criteria.addOrder(Order.asc(propertyName));
+        }else{
+            criteria.addOrder(Order.desc(propertyName));
+        }
+        List<Book> list = criteria.list();
+        for(Book book: list){
+            System.out.println(book);
+        }
+    }
+
+    @Override
+    public void fetchByProjection(String propertyName) {
+
+        Session session = configuration.buildSessionFactory().openSession();
+        Criteria criteria = session.createCriteria(Book.class);
+        Projection projection = Projections.property(propertyName);
+
+        criteria.setProjection(projection);
+        List list = criteria.list();
+        for(Object book: list){
+            System.out.println(book);
+        }
+
     }
 }

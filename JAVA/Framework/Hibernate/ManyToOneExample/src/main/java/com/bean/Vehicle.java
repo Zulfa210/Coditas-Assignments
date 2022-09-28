@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 public class Vehicle {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "vehicle_id")
     private int vehicleId;
 

@@ -15,4 +15,10 @@ public interface DaoOperations {
 
     public void updateBook(int id, String bookName);
 
+    public void fetchByRestriction(String authorName);
+
+    public void fetchByOrder(String order, String propertyName);
+
+    public void fetchByProjection(String propertyName);
+
 }

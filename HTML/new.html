@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="./INDEX.JS" defer></script> -->
+</head>
+<body>
+    <div id="data"></div>
+   <!-- <input type="submit" id="click"/>-->
+   <!-- <button type="button" id="BTN" placeholder="click me">Click me</button>  -->
+</body>
+<script>
+        $(document).ready(function(){
+            // $("#click").click(function(){
+           var req=new XMLHttpRequest();
+           req.open("GET","http://7d46-103-97-165-115.ngrok.io/fetch/1",true);
+           //req.setRequestHeader("ngrok-skip-browser-warning", "1234");
+           req.send();
+           req.onreadystatechange= function(){
+                if(req.readyState==4 && req.status==200)
+                {
+                  document.getElementById("data").innerHTML=req.response;
+                }
+           }
+        // });
+        });
+</script>
+</html>

@@ -17,7 +17,15 @@ public class MainApplication {
             int choice;
 
             do {
-                System.out.println("0. Exit\n1. Insert Book\n2. Get All Books\n3. Get Book by ID\n4. Update book name \n5. Delete book");
+                System.out.println("0. Exit\n1. Insert Book" +
+                        "\n2. Get All Books" +
+                        "\n3. Get Book by ID" +
+                        "\n4. Update book name " +
+                        "\n5. Delete book" +
+                        "\n6. Fetch by Restriction" +
+                        "\n7. Fetch by Order" +
+                        "\n8. Fetch By Projection");
+
                 choice = Integer.parseInt(bufferedReader.readLine());
                 switch (choice){
                     case 0:
@@ -53,6 +61,22 @@ public class MainApplication {
                         System.out.println("Enter book id: ");
                         int bookIdd = Integer.parseInt(bufferedReader.readLine());
                         daoOperations.deleteBook(bookIdd);
+                        break;
+
+                    case 6:
+                        System.out.println("Enter author name");
+                        String authorName = bufferedReader.readLine();
+                        daoOperations.fetchByRestriction(authorName);
+                        break;
+
+                    case 7:
+                        System.out.println("Enter order and property Name");
+                        daoOperations.fetchByOrder(bufferedReader.readLine(), bufferedReader.readLine());
+                        break;
+
+                    case 8:
+                        System.out.println("Enter property Name");
+                        daoOperations.fetchByProjection(bufferedReader.readLine());
                         break;
 
                     default:
