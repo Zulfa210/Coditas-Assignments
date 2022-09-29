@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+<center>
+    <h1> Login Page</h1>
+    <div style="border: 2px solid black; margin-top: 50px; padding-top:50px; padding-bottom:50px">
+        <pre style="font-size: 20px">
+        <form action = "LoginServlet" method="post">
+            Account number: <input type="number" name ="accountNumber"><br>
+            Password:       <input type="password" name="password"><br>
+            Account Type    <select name = "accountType">
+                            <option value="saving">Saving Account</option>
+                            <option value="Current">Current Account</option>
+        </select><br>
+            <input type="submit" value="Login">
+        </form>
+             </pre>
+    </div>
+</center>
+</body>
+</html>
