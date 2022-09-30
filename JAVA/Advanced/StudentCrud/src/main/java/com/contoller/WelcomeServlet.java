@@ -47,7 +47,7 @@ public class WelcomeServlet extends HttpServlet {
             out.println("<td>" + student.getStudentCity() + "</td>");
             out.println("<td>" + student.getStudentPercentage() + "</td>");
             out.println("<td>" + "<a href='DeleteConfirm?id="+student.getStudentId()+"'><button type='button'>Delete Student</button></a><br>" + "</td>");
-            out.println("<td>" + "<a href='UpdateMenu?id="+student.getStudentId()+"'><button type='button'>Update Student</button></a><br>" + "</td>");
+            out.println("<td>" + "<a href='UpdateMenu?id="+student.getStudentId()+"&name="+student.getStudentName()+"'><button type='button'>Update Student</button></a><br>" + "</td>");
             out.println("</tr>");
         }
         out.println("</table><div style = 'padding-top:20px'>");
