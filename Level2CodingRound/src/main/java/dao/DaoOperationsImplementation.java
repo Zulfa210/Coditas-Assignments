@@ -39,8 +39,8 @@ public class DaoOperationsImplementation implements DaoOperations {
     }
 
     @Override
-    public int insertSubjectMarks(int studentId, int subjectId, int subjectMarks) {
-        return jdbcTemplate.update("insert into student_marks values (?,?,?)", studentId, subjectId, subjectMarks);
+    public int insertSubjectMarks(int studentId, int subjectId, float subjectMarks) {
+        return jdbcTemplate.update("insert into subject_marks values (?,?,?)", studentId, subjectId, subjectMarks);
     }
 
     @Override

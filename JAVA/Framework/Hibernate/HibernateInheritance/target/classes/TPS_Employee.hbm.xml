@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.bean.Employee" table="TPS_Employee" >
+        <id name="employeeId">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="EmployeeName"></property>
+
+        <joined-subclass name="com.bean.PartTimeEmployee" table="TPS_PTE">
+            <key column="employeeId"></key>
+            <property name="noOfHours" column="PTE_NO_OF_HRS"></property>
+            <property name="salaryPerHours" column="PTE_SALARY_PER_HOURS"></property>
+
+        </joined-subclass>
+
+
+
+        <joined-subclass name="com.bean.FullTimeEmployee" table="TPS_FTE">
+            <key column="employeeId"></key>
+            <property name="fixedSalary" column="FTE_FIXED_SALARY"></property>
+            <property name="extraNoOfHours" column="FTE_EXTRA_HOURS"></property>
+            <property name="extraHoursSalary" column="FTE_EXTRA_HOURS_SALARY"></property>
+        </joined-subclass>
+    </class>
+</hibernate-mapping>

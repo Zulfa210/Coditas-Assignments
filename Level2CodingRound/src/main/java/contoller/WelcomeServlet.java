@@ -33,7 +33,7 @@ public class WelcomeServlet extends HttpServlet {
         List<List<Student>> studentList = new ArrayList<>();
 
         studentList = Operations.showStudentData();
-out.println("<table>");
+        out.println("<table border= '2'>");
         out.println("<tr>");
         out.println("<td>" + "Student Id" + "</td>");
         out.println("<td>" + "student ID" + "</td>");
@@ -41,7 +41,7 @@ out.println("<table>");
         out.println("<td>" + "mobile" + "</td>");
         out.println("<td>" + "Subjects" + "</td>");
         out.println("<td>" + "Percentage" + "</td>");
-        out.println("<.td>");
+        out.println("</tr>");
 
         for(List<Student> students: studentList){
             float sum = 0;
@@ -53,21 +53,24 @@ out.println("<table>");
                 out.println("<td>" + student.getStudentMobileNo() + "</td>");
                 out.println("<td>");
                 for(Subject subject: student.getSubjectList()){
-                    out.println(subject.getSubjectName()+ ": " + subject.getSubjectMarks());
+
+                    out.println(subject.getSubjectName()+ ": " + subject.getSubjectMarks() );
                     sum = sum+subject.getSubjectMarks();
                 }
+                out.println("</td>");
                 float percentage = sum/ student.getSubjectList().size();
+                out.println("<td>");
                 out.println(percentage);
                 out.println("</td>");
 
-                out.println("/tr");
+                out.println("</tr>");
             }
-            out.println("</table>");
-        }
 
-        out.println("<a href ='InsertStudent'>Add student</a>");
-        out.println("<a href ='InsertSubject'>Add subject</a>");
-        out.println("<a href ='InsertMarks'>Add Marks</a>");
+        }
+        out.println("</table>");
+        out.println("<br><a href ='InsertStudent.html'>Add student</a>");
+        out.println("<a href ='InsertSubject.html'>Add subject</a>");
+        out.println("<a href ='InsertMarks.html'>Add Marks</a>");
 
     }
 }

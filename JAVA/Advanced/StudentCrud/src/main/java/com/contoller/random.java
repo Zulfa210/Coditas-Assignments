@@ -1,5 +1,7 @@
 package com.contoller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -15,7 +17,12 @@ public class random {
             s = s+Integer.toString(random.nextInt(10));
         }
         long x = Long.parseLong(s);
-        System.out.println(x);
+        //System.out.println(x);
+
+        double a =  (10/0.0);
+        System.out.println(a);
+
+        List<Integer> list = new ArrayList<>();
     }
 }
 

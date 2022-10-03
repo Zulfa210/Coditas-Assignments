@@ -34,7 +34,7 @@
             true
         </property>
 
-        <mapping resource="TPC_Employee.hbm.xml"></mapping>
+        <mapping resource="TPS_Employee.hbm.xml"></mapping>
 
     </session-factory>
 </hibernate-configuration>

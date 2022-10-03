@@ -16,6 +16,7 @@ public interface DaoOperations {
 
     int insertSubjectMarks(int studentId, int subjectId, float subjectMarks);
 
+
     public int deleteStudent(int studentId);
     public int updateStudent(int studentId, float studentMarks);
 

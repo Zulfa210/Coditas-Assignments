@@ -18,7 +18,7 @@ import java.io.PrintWriter;
 /**
  * @author Zulfa Attar
  */
-@WebServlet("InsertSubject")
+@WebServlet("/InsertSubject")
 public class InsertSubject extends HttpServlet {
 
     @Override
