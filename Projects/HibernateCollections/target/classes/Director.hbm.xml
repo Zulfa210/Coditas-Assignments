@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.bean.Director" table="Director_Details">
+        <id name="directorId"></id>
+        <property name="directorName"></property>
+        <set name="movies">
+            <key column="movieId"></key>
+           <one-to-many class="com.bean.Movie"/>
+        </set>
+    </class>
+
+    <class name="com.bean.Movie" table="movie_table">
+        <id name="movieId">
+            <generator class="increment"></generator>
+        </id>
+        <property name="movieName"></property>
+    </class>
+</hibernate-mapping>

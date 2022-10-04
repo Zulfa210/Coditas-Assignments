@@ -17,8 +17,6 @@
 
         </joined-subclass>
 
-
-
         <joined-subclass name="com.bean.FullTimeEmployee" table="TPS_FTE">
             <key column="employeeId"></key>
             <property name="fixedSalary" column="FTE_FIXED_SALARY"></property>

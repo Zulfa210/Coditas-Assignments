@@ -5,6 +5,7 @@ import com.Student_Management_System.utils.GetSessionFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,8 +13,11 @@ import java.util.List;
 /**
  * @author Zulfa Attar
  */
+
+@Service
 public class StudentDaoImplementation implements StudentDao{
 
+    public StudentDaoImplementation() {}
     SessionFactory sessionFactory = GetSessionFactory.getSessionFactory();
     @Override
     public void registerStudent(Student student) {
@@ -41,13 +45,19 @@ public class StudentDaoImplementation implements StudentDao{
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
-        List<Student> studentList = session.createQuery("from student").list();
+        List<Student> studentList = session.createQuery("from Student").list();
 
         return studentList;
     }
 
     @Override
-    public int updateStudent(Student student) {
+    public void updateStudent(Student student) {
+
+        Session session = sessionFactory.openSession();
+        Transaction transaction= session.beginTransaction();
+
+        session.saveOrUpdate(student);
+        transaction.commit();
 
     }
 }

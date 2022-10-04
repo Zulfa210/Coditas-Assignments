@@ -13,6 +13,6 @@ public interface StudentDao {
 
     public List<Student> showAllStudents();
 
-    public int updateStudent(Student student);
+    public void updateStudent(Student student);
 
 }

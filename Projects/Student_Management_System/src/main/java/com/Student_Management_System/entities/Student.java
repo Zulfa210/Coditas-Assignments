@@ -1,9 +1,8 @@
 package com.Student_Management_System.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.sun.istack.NotNull;
+
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
@@ -16,23 +15,56 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int studentEnrollmentId;
+    @Column(name = "student_EnrollmentId")
+    @NotNull
+    private Integer studentEnrollmentId;
+
+
+    @Column(name = "student_roll_no")
+    @NotNull
     private int studentRollNo;
+
+    @Column(name = "student_first_name")
     private String studentFirstName;
+
+    @Column(name = "student_last_name")
     private String studentLastName;
+
+    @Column(name = "student_gender")
     private String studentGender;
+
+    @Column(name = "student_dob")
     private Date studentDateOfBirth;
+
+    @Column(name = "student_department")
     private String studentDepartment;
+
+    @Column(name = "student_class")
     private String studentClass;
 
+    @ManyToOne(cascade = CascadeType.ALL)
     private Address studentTemporaryAddress;
-    private Address studentPermanentAddress;
 
-    public int getStudentEnrollmentId() {
+    public Student() {
+    }
+
+    public Student(Integer studentEnrollmentId, int studentRollNo, String studentFirstName, String studentLastName, String studentGender, Date studentDateOfBirth, String studentDepartment, String studentClass, Address studentTemporaryAddress) {
+        this.studentEnrollmentId = studentEnrollmentId;
+        this.studentRollNo = studentRollNo;
+        this.studentFirstName = studentFirstName;
+        this.studentLastName = studentLastName;
+        this.studentGender = studentGender;
+        this.studentDateOfBirth = studentDateOfBirth;
+        this.studentDepartment = studentDepartment;
+        this.studentClass = studentClass;
+        this.studentTemporaryAddress = studentTemporaryAddress;
+    }
+
+    public Integer getStudentEnrollmentId() {
         return studentEnrollmentId;
     }
 
-    public void setStudentEnrollmentId(int studentEnrollmentId) {
+    public void setStudentEnrollmentId(Integer studentEnrollmentId) {
         this.studentEnrollmentId = studentEnrollmentId;
     }
 
@@ -100,11 +132,4 @@ public class Student {
         this.studentTemporaryAddress = studentTemporaryAddress;
     }
 
-    public Address getStudentPermanentAddress() {
-        return studentPermanentAddress;
-    }
-
-    public void setStudentPermanentAddress(Address studentPermanentAddress) {
-        this.studentPermanentAddress = studentPermanentAddress;
-    }
 }
