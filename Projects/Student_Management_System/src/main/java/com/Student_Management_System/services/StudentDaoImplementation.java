@@ -1,5 +1,6 @@
 package com.Student_Management_System.services;
 
+import com.Student_Management_System.entities.Address;
 import com.Student_Management_System.entities.Student;
 import com.Student_Management_System.utils.GetSessionFactory;
 import org.hibernate.Session;
@@ -18,30 +19,36 @@ import java.util.List;
 public class StudentDaoImplementation implements StudentDao{
 
     public StudentDaoImplementation() {}
-    SessionFactory sessionFactory = GetSessionFactory.getSessionFactory();
     @Override
     public void registerStudent(Student student) {
+        SessionFactory sessionFactory = GetSessionFactory.getSessionFactory();
 
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
+        Address address = student.getStudentTemporaryAddress();
+        session.save(address);
         session.save(student);
         transaction.commit();
+        session.close();
 
     }
 
     @Override
-    public void deleteStudent(int enrollmentId) {
-
+    public void deleteStudent(int studentEnrollmentId) {
+        SessionFactory sessionFactory = GetSessionFactory.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
-        session.delete(session.get(Student.class, enrollmentId));
+        Student student = session.get(Student.class, studentEnrollmentId);
+        System.out.println(student);
+        session.delete(student.getStudentTemporaryAddress());
+        session.delete(student);
         transaction.commit();
-
-
+        session.close();
     }
 
     @Override
     public List<Student> showAllStudents() {
+        SessionFactory sessionFactory = GetSessionFactory.getSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
 
@@ -52,12 +59,13 @@ public class StudentDaoImplementation implements StudentDao{
 
     @Override
     public void updateStudent(Student student) {
+        SessionFactory sessionFactory = GetSessionFactory.getSessionFactory();
 
         Session session = sessionFactory.openSession();
         Transaction transaction= session.beginTransaction();
 
+        session.saveOrUpdate(student.getStudentTemporaryAddress());
         session.saveOrUpdate(student);
         transaction.commit();
-
     }
 }

@@ -11,7 +11,9 @@
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
+        <property name="connection.pool_size">10000</property>
         <mapping class="com.Student_Management_System.entities.Address"/>
         <mapping class="com.Student_Management_System.entities.Student"/>
+
     </session-factory>
 </hibernate-configuration>

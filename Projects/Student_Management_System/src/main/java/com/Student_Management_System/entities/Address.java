@@ -33,8 +33,8 @@ public class Address {
 
 //@OneToMany(cascade = CascadeType.ALL, mappedBy = "studentTemporaryAddress")
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Student> student = new ArrayList<>();
+    @OneToMany(cascade = CascadeType.ALL )
+    private List<Student> student;
 
     public Address() {
     }
@@ -94,5 +94,17 @@ public class Address {
 
     public void setPincode(int pincode) {
         this.pincode = pincode;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "addressId=" + addressId +
+                ", houseNumber=" + houseNumber +
+                ", areaName='" + areaName + '\'' +
+                ", cityName='" + cityName + '\'' +
+                ", pincode=" + pincode +
+                ", student=" + student +
+                '}';
     }
 }

@@ -17,8 +17,8 @@
         $(document).ready(function(){
             // $("#click").click(function(){
            var req=new XMLHttpRequest();
-           req.open("GET","https://6b24-106-78-161-101.ngrok.io/fetchAll",true);
-           //req.setRequestHeader("ngrok-skip-browser-warning", "1234");
+           req.open("GET","https://c4ec-1-22-124-182.in.ngrok.io/showStudents",true);
+           req.setRequestHeader("ngrok-skip-browser-warning", "1234");
            req.send();
            req.onreadystatechange= function(){
                 if(req.readyState==4 && req.status==200)

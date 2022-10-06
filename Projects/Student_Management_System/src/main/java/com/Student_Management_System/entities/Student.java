@@ -1,6 +1,7 @@
 package com.Student_Management_System.entities;
 
-import com.sun.istack.NotNull;
+
+import com.sun.istack.internal.NotNull;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -17,7 +18,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "student_EnrollmentId")
     @NotNull
-    private Integer studentEnrollmentId;
+    private int studentEnrollmentId;
 
 
     @Column(name = "student_roll_no")
@@ -42,13 +43,24 @@ public class Student {
     @Column(name = "student_class")
     private String studentClass;
 
+    @Column(name = "student_percentage")
+    private float studentPercentage;
+
+    public float getStudentPercentage() {
+        return studentPercentage;
+    }
+
+    public void setStudentPercentage(float studentPercentage) {
+        this.studentPercentage = studentPercentage;
+    }
+
     @ManyToOne(cascade = CascadeType.ALL)
     private Address studentTemporaryAddress;
 
     public Student() {
     }
 
-    public Student(Integer studentEnrollmentId, int studentRollNo, String studentFirstName, String studentLastName, String studentGender, Date studentDateOfBirth, String studentDepartment, String studentClass, Address studentTemporaryAddress) {
+    public Student(int studentEnrollmentId, int studentRollNo, String studentFirstName, String studentLastName, String studentGender, Date studentDateOfBirth, String studentDepartment, String studentClass, float studentPercentage, Address studentTemporaryAddress) {
         this.studentEnrollmentId = studentEnrollmentId;
         this.studentRollNo = studentRollNo;
         this.studentFirstName = studentFirstName;
@@ -57,14 +69,15 @@ public class Student {
         this.studentDateOfBirth = studentDateOfBirth;
         this.studentDepartment = studentDepartment;
         this.studentClass = studentClass;
+        this.studentPercentage = studentPercentage;
         this.studentTemporaryAddress = studentTemporaryAddress;
     }
 
-    public Integer getStudentEnrollmentId() {
+    public int getStudentEnrollmentId() {
         return studentEnrollmentId;
     }
 
-    public void setStudentEnrollmentId(Integer studentEnrollmentId) {
+    public void setStudentEnrollmentId(int studentEnrollmentId) {
         this.studentEnrollmentId = studentEnrollmentId;
     }
 
@@ -131,5 +144,7 @@ public class Student {
     public void setStudentTemporaryAddress(Address studentTemporaryAddress) {
         this.studentTemporaryAddress = studentTemporaryAddress;
     }
+
+
 
 }
