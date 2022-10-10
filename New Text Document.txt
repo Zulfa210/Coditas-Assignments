@@ -1,0 +1,193 @@
+Steps or JPA:
+
+1) POJO class with annotations
+ 1.1 database creation -> explicitly
+ 1.2 Table creation with constraint automatically done by hibernate
+
+2) Main Application -> Driver Class
+ 2.1 Main methos
+Entity Manager Factory = > database? username, pwd
+Entity Manager = > 
+Entity = > 
+
+
+
+
+
+
+
+
+
+
+
+Tangible or Intangible Asset
+
+Some intangible assets may be contained in or on a physical substance
+such as a compact disk (in the case of computer software), legal documentation (in the case of a licence or patent) or film (in the case of motion
+pictures). The cost of the physical substance containing the intangible
+assets is usually not significant. Accordingly, the physical substance containing an intangible asset, though tangible in nature, is commonly treated
+as a part of the intangible asset contained in or on it.
+
+Minimization of ER D=>https://www.geeksforgeeks.org/minimization-of-er-diagrams/ 
+https://www.tutorialspoint.com/explain-the-conversion-of-er-diagrams-to-tables-in-dbms
+
+https://www.codingninjas.com/codestudio/library/minimization-of-er-diagram
+Best Resources for ERD=> https://www.guru99.com/er-diagram-tutorial-dbms.html
+ERD Start to end             =>http://gdevtest.geeksforgeeks.org/introduction-of-er-model/
+
+1) Student: (Id, Name, streetName, cityName, pincode, Date_of_Birth, Gender, faculty_id, hostel_id )
+Student_mobno(student_id, mobile_no)
+2) Faculty: (Id, Name, Mobile_no, Department, Salary ,department_id)
+3) Departments: Id, Name, No. of Courses, No. of Faculties
+4) Hostel: Id, Address, Name, No_of_seats
+5) Exams: Exam_code, Date, Time, Room_no
+6) Courses: Course name, Course id, Duration
+7) HOD: HOD_ID, Name
+
+
+ World Music Association Database 
+
+1) Orchestra: orchestra_name primary key, city, country, music_director
+2) Musician: musician_number primary key, musician_name, instrument, annual_salary,orchestra_name foreign key(orchestra_name) references orchestra(ororchestra_name)
+3) Degree:  musician_number, degree, university_year, primary key(musician_number, degree), foriegn key(musician_number) refrences musician(musician_number)
+4) Recording: orchestra_name, composition_name, composer_name, year, price, 
+primary key(orchestra_name, composition_name, composer_name), 
+foreign key(orchestra name) references orchestra(orchestra_name)
+foreign key(composition_name, composer_name) references Composition(composition_name, composer_name)
+5) Composition: composition_name, composer_name, year, primary key(composition_name, composer_name)
+foreign key(composer_name) references Composer(composer_name)
+6) Composer: composer_name primary key, country, date_of_birth
+
+
+check accessibilty of access modifiers using aggregation example 1)within two different packages 2) in sub packages
+
+git add .
+git status
+
+git commit -m "Commit by Zulfa Attar on Address" 
+
+
+
+ServletConfig
+-Servletconfig object is one per servlet class
+-Object of Servletconfig will be created during initialization process of the servlet
+-Scope: as long as a servlet is executing, ServletConfig object will be available, 
+it will be destroyed once the servlet execution is completed.
+-ServletConfig is public to a particular servlet
+-Servlet config starts after recieving request
+
+ 
+ServletContext
+-Servlet context object is one per web application
+-Object of ServletConfig will be created during deployment of web application
+-Scope: AS long as web application is executing ServletContext objet will be available for all servlet's and jsp's 
+and it will be destroyed when the weeb application is removed from the web server
+-ServletContext Object is public to all the servlet's and jsp's in the application
+-Servlet context start's before any request
+
+create table student (id int primary key auto_increment, username varchar(50), password varchar(50), name varchar(100), about_me text, testimonial text, age int, address text, class varchar(50), mobile_no varchar(20));
+
+mysql> create table teacher (id int primary key auto_increment, username varchar(50), password varchar(50), name varchar(100), about_me text, testimonial text, age int, address text, date_of_joining varchar(50), mobile_no varchar(20), profile_photo text);
+
+create table studentteacher (student_id int, teacher_id int, foreign key(student_id) references student(id) on delete cascade on update cascade, foreign key(teacher_id) references teacher(id) on delete cascade on update cascade);
+
+
+create table Scientist(scientist_id int primary key not null,
+     scientist_name varchar(255),
+     scientist_dob varchar(50),
+     scientist_dod varchar(50),
+     scientist_profile_picture text,
+    scientist_bio text,
+     scientist_education varchar(255),
+     scientist_university varchar(255),
+     scientist_countries varchar(255),
+     scientist_field_of_study varchar(255));
+
+create table inventions(invention_id int primary key, invention_name varchar(255), scientist_id int, foreign key(scientist_id) references scientist(scientist_id));
+
+create table awards(award_id int primary key, award_name varchar(255), scientist_id int, foreign key(scientist_id) references scientist(scientist_id));
+
+
+insert into scientist values (2, 
+"Isaac Newton", "4 January 1643", "31 March 1727(aged 84)", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Portrait_of_Sir_Isaac_Newton%2C_1689.jpg/220px-Portrait_of_Sir_Isaac_Newton%2C_1689.jpg", 
+"Sir Isaac Newton PRS (25 December 1642 – 20 March 1726/27[a]) was an English mathematician, physicist, astronomer, 
+alchemist, theologian, and author (described in his time as a \"natural philosopher\"), widely recognised as one of the
+ greatest mathematicians and physicists of all time and among the most influential scientists. He was a key figure in the
+ philosophical revolution known as the Enlightenment. His book Philosophiæ Naturalis Principia Mathematica (Mathematical
+ Principles of Natural Philosophy), first published in 1687, established classical mechanics. Newton also made seminal
+ contributions to optics, and shares credit with German mathematician Gottfried Wilhelm Leibniz for developing infinitesimal
+ calculus.In the Principia, Newton formulated the laws of motion and universal gravitation that formed the dominant 
+ scientific viewpoint until it was superseded by the theory of relativity. Newton used his mathematical description 
+ of gravity to derive Kepler's laws of planetary motion, account for tides, the trajectories of comets, the precession
+ of the equinoxes and other phenomena, eradicating doubt about the Solar System's heliocentricity. He demonstrated that
+ the motion of objects on Earth and celestial bodies could be accounted for by the same principles. Newton's 
+ inference that the Earth is an oblate spheroid was later confirmed by the geodetic measurements of Maupertuis, La 
+ Condamine, and others, convincing most European scientists of the superiority of Newtonian mechanics over earlier 
+ systems.Newton built the first practical reflecting telescope and developed a sophisticated theory of colour based 
+ on the observation that a prism separates white light into the colours of the visible spectrum. His work on light 
+ was collected in his highly influential book Opticks, published in 1704. He also formulated an empirical law of 
+ cooling, made the first theoretical calculation of the speed of sound, and introduced the notion of a Newtonian 
+ fluid. In addition to his work on calculus, as a mathematician Newton contributed to the study of power series, 
+ generalised the binomial theorem to non-integer exponents, developed a method for approximating the roots of a 
+ function, and classified most of the cubic plane curves.","M.A. (1668)","Trinity College, Cambridge",
+"Great Britain, Woolsthorpe-by-Colsterworth, Lincolnshire, England","	
+Physics, Natural Philosophy, Alchemy, Theology, Mathematics, Astronomy, Economics");
+
+
+se project_db;
+
+insert into scientist values (5, 
+"Nikola Tesla", "10 July 1856", "7 January 1943 (aged 86)", 
+"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Tesla_circa_1890.jpeg/220px-Tesla_circa_1890.jpeg", 
+"Nikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, and futurist best known for his contributions to the design of the modern alternating current (AC) electricity supply system.Born and raised in the Austrian Empire, Tesla studied engineering and physics in the 1870s without receiving a degree, gaining practical experience in the early 1880s working in telephony and at Continental Edison in the new electric power industry. ",
+ "University drop out","Graz University of Technology ",
+"Austria, America ","Electrical engineering, Mechanical engineering");
+
+update scientist set scientist_bio = "Albert Einstein was a German-born theoretical physicist, widely acknowledged to be one of the greatest and most influential physicists of all time. Einstein is best known for developing the theory of relativity, but he also made important contributions to the development of the theory of quantum mechanics. Relativity and quantum mechanics are together the two pillars of modern physics. His mass-energy equivalence formula E = mc2, which arises from relativity theory, has been dubbed 'the world's most famous equation'. His work is also known for its influence on the philosophy of science. He received the 1921 Nobel Prize in Physics 'for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect', a pivotal step in the development of quantum theory. His intellectual achievements and originality resulted in 'Einstein' becoming synonymous with 'genius'. "
+where scientist_id = 1;
+
+update scientist set scientist_bio = "Sir Isaac Newton was an English mathematician, physicist, astronomer,  alchemist, theologian, and author (described in his time as a \"natural philosopher\"), widely recognised as one of the  greatest mathematicians and physicists of all time and among the most influential scientists. He was a key figure in the  philosophical revolution known as the Enlightenment. His book Philosophiæ Naturalis Principia Mathematica (Mathematical  Principles of Natural Philosophy), first published in 1687, established classical mechanics. Newton also made seminal  contributions to optics, and shares credit with German mathematician Gottfried Wilhelm Leibniz for developing infinitesimal  calculus.In the Principia, Newton formulated the laws of motion and universal gravitation that formed the dominant  scientific viewpoint until it was superseded by the theory of relativity. "
+where scientist_id = 2;
+
+update scientist set scientist_bio = "Marie Salomea Skłodowska–Curie was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person and the only woman to win the Nobel Prize twice, and the only person to win the Nobel Prize in two scientific fields. Her husband, Pierre Curie, was a co-winner on her first Nobel Prize, making them the first ever married couple to win the Nobel Prize and launching the Curie family legacy of five Nobel Prizes. She was, in 1906, the first woman to become a professor at the University of Paris. She was born in Warsaw, in what was then the Kingdom of Poland, part of the Russian Empire. She studied at Warsaw's clandestine Flying University and began her practical scientific training in Warsaw. "
+where scientist_id = 3;
+
+update scientist set scientist_bio = "Thomas Alva Edison was an American inventor and businessman. He developed many devices in fields such as electric power generation, mass communication, sound recording, and motion pictures. These inventions, which include the phonograph, the motion picture camera, and early versions of the electric light bulb, have had a widespread impact on the modern industrialized world. He was one of the first inventors to apply the principles of organized science and teamwork to the process of invention, working with many researchers and employees. He established the first industrial research laboratory.Edison was raised in the American Midwest. Early in his career he worked as a telegraph operator, which inspired some of his earliest inventions. "
+where scientist_id = 4;
+
+
+insert into scientist values (4,  "Thomas Edison", "February 11, 1847", "October 18, 1931 (aged 84)",  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Thomas_Edison2.jpg/220px-Thomas_Edison2.jpg",  "Thomas Alva Edison was an American inventor and businessman.[1][2][3] He developed many devices in fields such as electric power generation, mass communication, sound recording, and motion pictures.[4] These inventions, which include the phonograph, the motion picture camera, and early versions of the electric light bulb, have had a widespread impact on the modern industrialized world.[5] He was one of the first inventors to apply the principles of organized science and teamwork to the process of invention, working with many researchers and employees. He established the first industrial research laboratory.Edison was raised in the American Midwest. Early in his career he worked as a telegraph operator, which inspired some of his earliest inventions.[4] In 1876, he established his first laboratory facility in Menlo Park, New Jersey, where many of his early inventions were developed. He later established a botanical laboratory in Fort Myers, Florida, in collaboration with businessmen Henry Ford and Harvey S. Firestone, and a laboratory in West Orange, New Jersey, that featured the world's first film studio, the Black Maria. With 1,093 US patents in his name, as well as patents in other countries, Edison is regarded as the most prolific inventor in American history.[7] Edison married twice and fathered six children. He died in 1931 of complications of diabetes.",  "Self-educated; some coursework at Cooper Union","Cooper Union", "United States","Mechanics and Electrical science")
+
+
+insert into scientist values (3,  "Marie Curie", "7 November 1867", "4 July 1934 (aged 66)",  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/220px-Marie_Curie_c._1920s.jpg",  "Marie Salomea Skłodowska–Curie was a Polish and naturalized-French physicist and chemist who conducted pioneering  research on radioactivity. She was the first woman to win a Nobel Prize, the first person and the only woman to win the  Nobel Prize twice, and the only person to win the Nobel Prize in two scientific fields. Her husband, Pierre Curie,  was a co-winner on her first Nobel Prize, making them the first ever married couple to win the Nobel Prize and   launching the Curie family legacy of five Nobel Prizes. She was, in 1906, the first woman to become a professor at the   University of Paris.[5] She was born in Warsaw, in what was then the Kingdom of Poland, part of the Russian Empire. She studied at Warsaw's  clandestine Flying University and began her practical scientific training in Warsaw. In 1891, aged 24,  she followed her elder sister Bronisława to study in Paris, where she earned her higher degrees and conducted her  subsequent scientific work. In 1895 she married the French physicist Pierre Curie,   and she shared the 1903 Nobel Prize in Physics with him and with the physicist Henri Becquerel for their   pioneering work developing the theory of \"radioactivity\"—a term she coined.[6][7] In 1906 Pierre Curie died in a   Paris street accident. Marie won the 1911 Nobel Prize in Chemistry for her discovery of the elements polonium and  radium, using techniques she invented for isolating radioactive isotopes.",  "Licenciateships in Physics and the Mathematical Sciences","University of Paris", "Poland (by birth), France (by marriage)","  Physics, Chemistry")
+
+insert into scientist values (2,  "Isaac Newton", "4 January 1643", "31 March 1727(aged 84)", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Portrait_of_Sir_Isaac_Newton%2C_1689.jpg/220px-Portrait_of_Sir_Isaac_Newton%2C_1689.jpg",  "Sir Isaac Newton was an English mathematician, physicist, astronomer,  alchemist, theologian, and author (described in his time as a \"natural philosopher\"), widely recognised as one of the  greatest mathematicians and physicists of all time and among the most influential scientists. He was a key figure in the  philosophical revolution known as the Enlightenment. His book Philosophiæ Naturalis Principia Mathematica (Mathematical  Principles of Natural Philosophy), first published in 1687, established classical mechanics. Newton also made seminal  contributions to optics, and shares credit with German mathematician Gottfried Wilhelm Leibniz for developing infinitesimal  calculus.In the Principia, Newton formulated the laws of motion and universal gravitation that formed the dominant   scientific viewpoint until it was superseded by the theory of relativity. Newton used his mathematical description   of gravity to derive Kepler's laws of planetary motion, account for tides, the trajectories of comets, the precession  of the equinoxes and other phenomena, eradicating doubt about the Solar System's heliocentricity. He demonstrated that  the motion of objects on Earth and celestial bodies could be accounted for by the same principles. Newton's   inference that the Earth is an oblate spheroid was later confirmed by the geodetic measurements of Maupertuis, La   Condamine, and others, convincing most European scientists of the superiority of Newtonian mechanics over earlier   systems.Newton built the first practical reflecting telescope and developed a sophisticated theory of colour based   on the observation that a prism separates white light into the colours of the visible spectrum. His work on light   was collected in his highly influential book Opticks, published in 1704. He also formulated an empirical law of   cooling, made the first theoretical calculation of the speed of sound, and introduced the notion of a Newtonian   fluid. In addition to his work on calculus, as a mathematician Newton contributed to the study of power series,   generalised the binomial theorem to non-integer exponents, developed a method for approximating the roots of a   function, and classified most of the cubic plane curves.","M.A. (1668)","Trinity College, Cambridge", "Great Britain, Woolsthorpe-by-Colsterworth, Lincolnshire, England","  Physics, Natural Philosophy, Alchemy, Theology, Mathematics, Astronomy, Economics")
+
+
+insert into scientist values (1,  "Albert Einstein", "14 March 1879", "18 April 1955 (aged 76)", "https://upload.wikimedia.org/wikipedia/commons/thumb/3 /3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/220px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg",  "Albert Einstein was  a German-born theoretical physicist, widely acknowledged to be one of the greatest and most influential physicists  of all time. Einstein is best known for developing the theory of relativity, but he also made important contributions   to the development of the theory of quantum mechanics. Relativity and quantum mechanics are together the two pillars   of modern physics. His mass-energy equivalence formula E = mc2, which arises from relativity theory, has been   dubbed 'the world's most famous equation' His work is also known for its influence on the philosophy of science.   He received the 1921 Nobel Prize in Physics 'for his services to theoretical physics, and especially for his  discovery of the law of the photoelectric effect', a pivotal step in the development of q  uantum theory. His intellectual achievements and originality resulted in 'Einstein' becoming synonymous with 'genius'.  In 1905, a year sometimes described as his annus mirabilis ('miracle year'), Einstein published four groundbreaking papers. These outlined the theory of the photoelectric effect, explained Brownian motion, introduced special relativity, and demonstrated mass-energy equivalence. ", 
+"PhD in Physics (1905)","University of Zurich","Free State of Prussia (Weimar Republic, 1918-1933)_United States (1940-1955)","Physics, Philosophy")
+
+
+insert into student values(null, 1, "Steve", "Rogers", "Male", "1990-12-1", "Computer", "FE", 1);
+
+create table student (student_EnrollmentId int primary key auto_increment, student_roll_no int, student_first_name varchar(255), student_last_name varchar(255), student_gender varchar(255), student_dob date, student_department varchar(255), student_class varchar(255));
+ create table address (address_id int  primary key auto_increment, house_number int, area_name varchar(255), city_name varchar(255), pincode int);
+
+    {
+        "studentEnrollmentId": 2,
+        "studentRollNo": 2,
+        "studentFirstName": "Tony",
+        "studentLastName": "Stark",
+        "studentGender": "Male",
+        "studentDateOfBirth": "1990-10-22T18:30:00.000+00:00",
+        "studentDepartment": "Java",
+        "studentClass": "SE",
+        "studentTemporaryAddress": {
+            "addressId": 3,
+            "houseNumber": 111,
+            "areaName": "Paradise Road",
+            "cityName": "Kanpur",
+            "pincode": 500111,
+            "student": []
+        }
+    }
