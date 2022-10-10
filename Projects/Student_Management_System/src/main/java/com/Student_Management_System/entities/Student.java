@@ -46,6 +46,9 @@ public class Student {
     @Column(name = "student_percentage")
     private float studentPercentage;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Address studentTemporaryAddress;
+
     public float getStudentPercentage() {
         return studentPercentage;
     }
@@ -54,8 +57,7 @@ public class Student {
         this.studentPercentage = studentPercentage;
     }
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Address studentTemporaryAddress;
+
 
     public Student() {
     }

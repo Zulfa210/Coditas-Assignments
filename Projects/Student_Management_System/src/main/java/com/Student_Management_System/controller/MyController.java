@@ -57,4 +57,14 @@ public class MyController {
     public void updateStudent(@RequestBody Student student){
         operations.updateStudent(student);
     }
+
+    @CrossOrigin
+    @RequestMapping(value = "/**")
+    public HashMap invalidUrl(){
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("data", null);
+        hashMap.put("error", "Invalid URL");
+
+        return hashMap;
+    }
 }

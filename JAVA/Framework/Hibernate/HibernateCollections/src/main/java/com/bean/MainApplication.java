@@ -23,10 +23,17 @@ public class MainApplication {
         director.setDirectorId(101);
         director.setDirectorName("Remo");
 
+        Movie movie;
         Set<Movie> movies = new HashSet<>();
-        movies.add(new Movie(1, "ABCD"));
-        movies.add(new Movie(2, "ABCD2"));
-        movies.add(new Movie(3, "Street Dancer"));
+        movie  = new Movie(1, "ABCD");
+        session.save(movie);
+        movies.add(movie);
+        movie = new Movie(2, "ABCD2");
+        session.save(movie);
+        movies.add(movie);
+        movie = new Movie(3, "Street Dancer");
+        session.save(movie);
+        movies.add(movie);
 
         director.setMovies(movies);
 
@@ -40,6 +47,7 @@ public class MainApplication {
 //        movieSet.add(new Movie(3, "Dhoom2"));
 //
 //        director1.setMovies(movieSet);
+
 
         int i = (int)session.save(director);
        // int j = (int) session.save(director1);

@@ -14,7 +14,6 @@
             <key column="employeeId"></key>
             <property name="noOfHours" column="PTE_NO_OF_HRS"></property>
             <property name="salaryPerHours" column="PTE_SALARY_PER_HOURS"></property>
-
         </joined-subclass>
 
         <joined-subclass name="com.bean.FullTimeEmployee" table="TPS_FTE">
