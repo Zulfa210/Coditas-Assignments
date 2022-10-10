@@ -79,7 +79,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "\n\tAnimal{" +
                 "animalId=" + animalId +
                 ", animalName='" + animalName + '\'' +
                 ", animalType='" + animalType + '\'' +

@@ -93,9 +93,7 @@ public class ZooDaoImplementation  implements ZooDao{
 
         List<Animal> zooList = entityManager.createQuery("from Animal where animal_age >4").getResultList();
 
-        for(Animal zoo: zooList){
-            System.out.println(zoo);
-        }
+        System.out.println(zooList);
     }
     }
 

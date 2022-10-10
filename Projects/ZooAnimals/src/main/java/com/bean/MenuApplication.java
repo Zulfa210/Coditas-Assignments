@@ -27,6 +27,9 @@ public void menu(){
             choice = Integer.parseInt(bufferedReader.readLine());
 
             switch (choice){
+                case 0:
+                    System.exit(0);
+                    break;
                 case 1:
                     System.out.println("Enter Zoo name, Zoo city: ");
                     Zoo zoo = new Zoo();
@@ -40,7 +43,7 @@ public void menu(){
                     System.out.println("Enter Zoo id: ");
                     int zooId = Integer.parseInt(bufferedReader.readLine());
                     Animal animal = new Animal();
-                    System.out.println("Enter newAnimal Name, newAnimal type, newAnimal age: ");
+                    System.out.println("Enter Animal Name, Animal type, Animal age: ");
                     animal.setAnimalName(bufferedReader.readLine());
                     animal.setAnimalType(bufferedReader.readLine());
                     animal.setAnimalAge(Float.parseFloat(bufferedReader.readLine()));
@@ -97,7 +100,7 @@ public void menu(){
 
                 case 9:
                     zooDao.getAnimals();
-
+                    break;
 
                 default:
                     System.out.println("Invalid Choice");
