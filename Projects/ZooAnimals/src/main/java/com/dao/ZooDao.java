@@ -16,4 +16,6 @@ public interface ZooDao {
 
     void getAnimals();
 
+    public void getAnimalsUsingCriteria();
+
 }

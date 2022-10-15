@@ -23,7 +23,8 @@ public class Zoo {
     private String zooCity;
 
     @OneToMany(mappedBy = "zoo",
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH}, fetch = FetchType.EAGER)
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH},
+            fetch = FetchType.EAGER)
     private List<Animal> animalList;
 
 

@@ -23,7 +23,8 @@ public void menu(){
         int choice;
         do {
             System.out.println("0. Exit \n1. Add Zoo \n2. Add Animals \n3. Get Zoo \n4. Delete Animals" +
-                    "\n5. Delete zoo\n6. Update Zoo\n7. Update Animal\n8. Show All Zoo \n9. Show Animals with age>4");
+                    "\n5. Delete zoo\n6. Update Zoo\n7. Update Animal\n8. Show All Zoo \n9. Show Animals with age>4" +
+                    "\n10. Show animals with age >4 using criteria query");
             choice = Integer.parseInt(bufferedReader.readLine());
 
             switch (choice){
@@ -102,6 +103,9 @@ public void menu(){
                     zooDao.getAnimals();
                     break;
 
+                case 10:
+                    zooDao.getAnimalsUsingCriteria();
+                    break;
                 default:
                     System.out.println("Invalid Choice");
             }

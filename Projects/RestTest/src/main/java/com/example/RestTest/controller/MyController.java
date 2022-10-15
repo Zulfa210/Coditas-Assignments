@@ -17,7 +17,7 @@ import java.util.List;
 public class MyController {
 
     @Autowired
-DaoOperations daoOperations;
+    DaoOperations daoOperations;
 
 
     @CrossOrigin

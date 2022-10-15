@@ -58,7 +58,6 @@ public class Course {
         return "Course{" +
                 "courseId=" + courseId +
                 ", courseName='" + courseName + '\'' +
-                ", teacher=" + teacher +
                 '}';
     }
 }
