@@ -24,7 +24,7 @@ public class Verify {
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    private CustomUserDetailService userDetailsService;
+    private UserDetailsService userDetailsService;
 
 
     // @PostMapping("/authenticate")

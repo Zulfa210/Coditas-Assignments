@@ -17,8 +17,9 @@
         $(document).ready(function(){
             // $("#click").click(function(){
            var req=new XMLHttpRequest();
-           req.open("GET","https://c4ec-1-22-124-182.in.ngrok.io/showStudents",true);
-           req.setRequestHeader("ngrok-skip-browser-warning", "1234");
+           req.open("GET"," http://localhost:8080/admin/getTools",true);
+          //  req.setRequestHeader("ngrok-skip-browser-warning", "1234");
+           req.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGV2ZSIsImV4cCI6MTY2NjAwNzY3MywiaWF0IjoxNjY1OTg5NjczfQ.B48FuCaNwjrLCEH_lopXDlKN3fsoHFIWuJ_XtQd4Rn-H1cLgXo1eZ7orFehEt69j2XN44RG6fTqnkVwR4-Yz1w")
            req.send();
            req.onreadystatechange= function(){
                 if(req.readyState==4 && req.status==200)

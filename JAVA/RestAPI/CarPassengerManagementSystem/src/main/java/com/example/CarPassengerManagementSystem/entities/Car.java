@@ -1,4 +1,7 @@
-package com.example.CarPassengerManagementSystem.entities;/**
+package com.example.CarPassengerManagementSystem.entities;
+
+/**
  * @author Zulfa Attar
- */public class Car {
+ */
+public class  Car {
 }

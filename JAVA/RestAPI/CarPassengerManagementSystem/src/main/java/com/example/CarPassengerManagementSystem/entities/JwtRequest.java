@@ -1,4 +1,43 @@
-package com.example.CarPassengerManagementSystem.entities;/**
+package com.example.CarPassengerManagementSystem.entities;
+
+/**
  * @author Zulfa Attar
- */public class JwtRequest {
+ */
+public class JwtRequest {
+    private String username;
+    private String password;
+
+    public JwtRequest() {
+    }
+
+    @Override
+    public String toString() {
+        return "JwtRequest{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
+    public JwtRequest(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
 }

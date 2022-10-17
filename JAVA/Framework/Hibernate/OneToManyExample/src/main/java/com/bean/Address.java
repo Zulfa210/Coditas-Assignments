@@ -22,7 +22,7 @@ public class Address {
     @Column(name = "address_city")
     private String addressCity;
 
-    @ManyToOne()
+    @ManyToOne
     private  Student student;
 
     public int getAddressID() {
