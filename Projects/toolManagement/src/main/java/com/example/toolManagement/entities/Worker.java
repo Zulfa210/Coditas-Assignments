@@ -1,4 +1,7 @@
 package com.example.toolManagement.entities;
+/**
+ * @author Zulfa Attar
+ */
 
 import javax.persistence.*;
 import java.util.List;

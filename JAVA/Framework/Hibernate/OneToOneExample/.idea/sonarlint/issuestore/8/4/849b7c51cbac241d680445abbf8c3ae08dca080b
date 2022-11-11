@@ -1,0 +1,7 @@
+
+`
+java:S2095"EUse try-with-resources or close this "Session" in a "finally" clause.(¶‡ÀÅøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÒŽ§™
+S	java:S106"9Replace this use of System.out or System.err by a logger.(²àíÀÿÿÿÿÿ
+g
+java:S1128"LRemove this unused import 'jdk.nashorn.internal.runtime.regexp.joni.Config'.(˜ô¬’úÿÿÿÿ

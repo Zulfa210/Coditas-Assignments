@@ -1,5 +1,9 @@
 package com.example.toolManagement.config;
 
+/**
+ * @author Zulfa Attar
+ */
+
 import com.example.toolManagement.entities.User;
 import com.example.toolManagement.model.CustomerUserDetails;
 import com.example.toolManagement.repository.UserRepository;

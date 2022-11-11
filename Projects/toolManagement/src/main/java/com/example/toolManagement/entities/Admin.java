@@ -1,5 +1,9 @@
 package com.example.toolManagement.entities;
 
+/**
+ * @author Zulfa Attar
+ */
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;

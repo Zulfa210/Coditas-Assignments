@@ -1,4 +1,8 @@
 package com.example.toolManagement.controller;
+/**
+ * @author Zulfa Attar
+ */
+
 
 import com.example.toolManagement.model.JwtRequest;
 import com.example.toolManagement.model.JwtResponse;
@@ -31,7 +35,7 @@ public class Verify {
     WorkerRepository workerRepository;
 
     @PostMapping("/authenticate")
-    public JwtResponse authenicate(@RequestBody JwtRequest jwtRequest) throws Exception {
+    public JwtResponse authenticate(@RequestBody JwtRequest jwtRequest) throws Exception {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(

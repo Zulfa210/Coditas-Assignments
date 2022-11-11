@@ -1,8 +1,6 @@
 package com.bean;
 
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -15,6 +13,13 @@ public class Cart {
 
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Item> itemList;
+
+    @OneToOne
+    @JoinColumn(
+            name = "item_Id",
+            referencedColumnName = "itemId"
+    )
+    private Item item;
 
     public Cart() {
     }

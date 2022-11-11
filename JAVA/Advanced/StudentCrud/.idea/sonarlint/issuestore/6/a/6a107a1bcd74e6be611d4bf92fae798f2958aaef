@@ -1,0 +1,17 @@
+
+2
+java:S1643"Use a StringBuilder instead.(ƒĞ›®
+b	java:S101
+"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ªşÇó
+Y
+java:S3518"CMake sure this expression can't be zero before doing this division.(ıÔÚŒ
+S
+java:S1854"8Remove this useless assignment to local variable "list".(¤Êí…ıÿÿÿÿ
+R
+java:S1854"5Remove this useless assignment to local variable "a".(ıÔÚŒ8ìæ‡Æ0
+Q	java:S125"<This block of commented-out lines of code should be removed.(±İÊ²
+C
+java:S1481"&Remove this unused "a" local variable.(ıÔÚŒ8 ìæ‡Æ0
+S	java:S106"9Replace this use of System.out or System.err by a logger.(µÏ…èùÿÿÿÿ
+D
+java:S1481")Remove this unused "list" local variable.(¤Êí…ıÿÿÿÿ

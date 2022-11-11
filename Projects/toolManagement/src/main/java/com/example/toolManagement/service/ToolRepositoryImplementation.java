@@ -1,7 +1,12 @@
 package com.example.toolManagement.service;
 
+/**
+ * @author Zulfa Attar
+ */
+
 import com.example.toolManagement.entities.Tool;
 import com.example.toolManagement.repository.ToolRepository;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +37,8 @@ public class ToolRepositoryImplementation {
             existingTool.setToolSize(tool.getToolSize());
 //            existingTool.setToolQuantity(tool.getToolQuantity());
             return toolRepository.save(existingTool);
+
+
         }
         return null;
     }

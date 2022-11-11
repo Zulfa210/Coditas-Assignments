@@ -1,4 +1,7 @@
 package com.example.toolManagement.entities;
+/**
+ * @author Zulfa Attar
+ */
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -30,6 +33,7 @@ public class Tool {
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST, mappedBy = "orderedTools")
     @JsonIgnore
     private List<Order> orders;
+
 
     public Long getToolId() {
         return toolId;

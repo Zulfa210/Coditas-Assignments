@@ -1,0 +1,33 @@
+
+a
+java:S1192&"FDefine a constant instead of duplicating this literal "Error" 4 times.(Ê‡ý¿ýÿÿÿÿ
+c
+java:S1192#"HDefine a constant instead of duplicating this literal "Welcome" 8 times.(ëûÍÁûÿÿÿÿ
+a
+java:S1192 "FDefine a constant instead of duplicating this literal "value" 4 times.(„ºß­üÿÿÿÿ
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(üª¼í
+f
+java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(¾šçÞ
+o
+java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(™Œóœ
+g
+java:S1989"QHandle the following exception that could be thrown by "getBean": BeansException.(ƒÎ˜Ê
+|
+java:S1989#"aHandle the following exceptions that could be thrown by "include": ServletException, IOException.(ëûÍÁûÿÿÿÿ
+|
+java:S1989'"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Û ¥•ÿÿÿÿÿ
+|
+java:S1989."aHandle the following exceptions that could be thrown by "include": ServletException, IOException.(ëûÍÁûÿÿÿÿ
+|
+java:S19892"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Û ¥•ÿÿÿÿÿ
+|
+java:S19899"aHandle the following exceptions that could be thrown by "include": ServletException, IOException.(ëûÍÁûÿÿÿÿ
+|
+java:S1989="aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Û ¥•ÿÿÿÿÿ
+v
+java:S1989A"[Handle the following exception that could be thrown by "parseFloat": NumberFormatException.(æõ¥Ðúÿÿÿÿ
+|
+java:S1989D"aHandle the following exceptions that could be thrown by "include": ServletException, IOException.(ëûÍÁûÿÿÿÿ
+|
+java:S1989I"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Û ¥•ÿÿÿÿÿ

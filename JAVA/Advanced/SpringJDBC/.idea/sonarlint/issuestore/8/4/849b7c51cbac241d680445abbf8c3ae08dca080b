@@ -1,0 +1,28 @@
+
+`	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+E
+java:S3740H"/Provide the parametrized type for this generic.(ßÜÌŠ
+\
+java:S1192+"FDefine a constant instead of duplicating this literal "error" 3 times.(öØÈ¢
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Çµí‘
+O
+java:S1854H"9Remove this useless assignment to local variable "books".(ßÜÌŠ
+?
+java:S1659"$Declare "result" on a separate line.(œë°“úÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ƒøşÿÿÿÿÿ
+7	java:S131""Add a default case to this switch.(¨ÕÉ
+N	java:S106!"9Replace this use of System.out or System.err by a logger.(€²”“
+M	java:S106)"9Replace this use of System.out or System.err by a logger.(Çğõ"
+N	java:S106+"9Replace this use of System.out or System.err by a logger.(öØÈ¢
+N	java:S1060"9Replace this use of System.out or System.err by a logger.(ÜßÔë
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(°»¢­ùÿÿÿÿ
+M	java:S1066"9Replace this use of System.out or System.err by a logger.(Çğõ"
+N	java:S1068"9Replace this use of System.out or System.err by a logger.(öØÈ¢
+N	java:S106="9Replace this use of System.out or System.err by a logger.(ÜßÔë
+M	java:S106A"9Replace this use of System.out or System.err by a logger.(Çğõ"
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(öØÈ¢
+@
+java:S1481H"*Remove this unused "books" local variable.(ßÜÌŠ
+N	java:S106K"9Replace this use of System.out or System.err by a logger.(…µŞ¶
+S	java:S106M"9Replace this use of System.out or System.err by a logger.(òé±Öûÿÿÿÿ

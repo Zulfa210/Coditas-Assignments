@@ -1,14 +1,21 @@
 package com.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 /**
  * @author Zulfa Attar
  */
+@Entity
 public class Item {
 
-
+    @Id
     private int itemId;
     private String itemName;
     private int itemQuantity;
+
+    @ManyToOne
     private Cart cart;
 
     public Item() {

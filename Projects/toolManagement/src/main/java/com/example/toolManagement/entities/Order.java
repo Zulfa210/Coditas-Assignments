@@ -1,5 +1,9 @@
 package com.example.toolManagement.entities;
 
+/**
+ * @author Zulfa Attar
+ */
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;

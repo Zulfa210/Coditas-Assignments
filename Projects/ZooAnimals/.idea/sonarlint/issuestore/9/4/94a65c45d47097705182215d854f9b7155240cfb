@@ -1,0 +1,20 @@
+
+K
+java:S1191"5Use classes from the Java API instead of Sun classes.(èË„¶
+S	java:S106>"9Replace this use of System.out or System.err by a logger.(ˆ©ªãûÿÿÿÿ
+S	java:S106@"9Replace this use of System.out or System.err by a logger.(ãÆ×ëÿÿÿÿÿ
+Q	java:S125B"<This block of commented-out lines of code should be removed.(»ÄÁ×
+N	java:S106Y"9Replace this use of System.out or System.err by a logger.(å¤Ù
+S	java:S106c"9Replace this use of System.out or System.err by a logger.(á“¸Ïüÿÿÿÿ
+S	java:S106s"9Replace this use of System.out or System.err by a logger.(Ï¢£˜ýÿÿÿÿ
+S	java:S106t"9Replace this use of System.out or System.err by a logger.(œÅÁóÿÿÿÿÿ
+S	java:S106|"9Replace this use of System.out or System.err by a logger.(Ê¥ô†øÿÿÿÿ
+S	java:S106}"9Replace this use of System.out or System.err by a logger.(ëÇøøÿÿÿÿÿ
+W	java:S125€"<This block of commented-out lines of code should be removed.(üÌÉáøÿÿÿÿ
+T	java:S106‡"9Replace this use of System.out or System.err by a logger.(ÙîÄÄüÿÿÿÿ
+O	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(âòÂ
+W	java:S125Š"<This block of commented-out lines of code should be removed.(áÍ’çþÿÿÿÿ
+Q
+java:S1128"6Remove this unused import 'org.hibernate.query.Query'.(¤— ´ûÿÿÿÿ
+r
+java:S1128"\Remove this unused import 'com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Root'.(èË„¶

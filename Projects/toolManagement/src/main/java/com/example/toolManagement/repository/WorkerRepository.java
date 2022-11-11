@@ -1,5 +1,9 @@
 package com.example.toolManagement.repository;
 
+/**
+ * @author Zulfa Attar
+ */
+
 import com.example.toolManagement.entities.Worker;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

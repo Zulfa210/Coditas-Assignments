@@ -1,6 +1,8 @@
 package com.example.toolManagement.controller;
+/**
+ * @author Zulfa Attar
+ */
 
-import com.example.toolManagement.entities.Order;
 import com.example.toolManagement.entities.Tool;
 import com.example.toolManagement.entities.Worker;
 import com.example.toolManagement.service.OrderRepositoryImplementation;
@@ -32,7 +34,8 @@ public class AdminController {
         }
     }
 
-    @GetMapping("/getTools")
+   // @GetMapping("/getTools")
+    @RequestMapping(value = "/getTools", method = {RequestMethod.OPTIONS,RequestMethod.GET})
     public ResponseEntity getTools() {
         try {
             List<Tool> tools = toolRepositoryImplementation.getTools();

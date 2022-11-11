@@ -1,4 +1,7 @@
 package com.example.toolManagement.filter;
+/**
+ * @author Zulfa Attar
+ */
 
 import com.example.toolManagement.config.CustomUserDetailService;
 import com.example.toolManagement.utils.JwtUtility;
@@ -28,15 +31,19 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
         String authorization = httpServletRequest.getHeader("Authorization");
+        //httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
+//        httpServletResponse.setHeader("Access-Control-Allow-Methods", "POST, PUT, GET, OPTIONS, DELETE");
+       // httpServletResponse.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Origin, ngrok-skip-browser-warning, Access-Control-Allow-Methods, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
         String token = null;
         String userName = null;
 
-        if (null != authorization && authorization.startsWith("Bearer ")) {
+        if (authorization != null && authorization.startsWith("Bearer ")) {
             token = authorization.substring(7);
             userName = jwtUtility.getUsernameFromToken(token);
+            System.out.println(token);
         }
 
-        if (null != userName && SecurityContextHolder.getContext().getAuthentication() == null) {
+        if (userName != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             UserDetails userDetails
                     = userService.loadUserByUsername(userName);
 

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5898b70-69ce-4b41-b192-c3b60d37a087" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/src/main/java/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/src/main/java/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/src/main/webapp/Error.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/src/main/webapp/WEB-INF/WebSpring-Servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/src/main/webapp/Welcome.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../ADVANCE/SPRING-MVC/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/src/main/java/com/entities/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/src/main/java/com/utils/JpaUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/src/main/java/org/main/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../JPA/STARTER-PROJECT/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/config/WebSecurityConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/entities/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/entities/Domain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/entities/EmploymentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/entities/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/entities/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/entities/Trainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/entities/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/filter/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/request/JwtRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/response/JwtResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springrest/LDManagement/utils/JwtUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring-Boot-Demo/Spring-Boot-Demo/src/main/java/com/springrest/SpringBootDemo/controller/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Spring-Boot-Demo/Spring-Boot-Demo/src/main/java/com/springrest/SpringBootDemo/entities/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Hibernate/CACHING-IN-HIBERNATE/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Hibernate/CACHING-IN-HIBERNATE/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STUDENT-API/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STUDENT-API/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STUDENT-API/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STUDENT-API/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STUDENT-API/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../STUDENT-API/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_api/student_api/src/main/java/com/springrest/student_api/WebSecurity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_api/student_api/src/main/java/com/springrest/student_api/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_api/student_api/src/main/java/com/springrest/student_api/dao/ConnectDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_api/student_api/src/main/java/com/springrest/student_api/dao/StudentDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_api/student_api/src/main/java/com/springrest/student_api/dao/StudentDaoImplementation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_api/student_api/src/main/java/com/springrest/student_api/model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_api/student_api/src/main/java/com/springrest/student_api/model/StudentAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_api/student_api/src/main/java/com/springrest/student_api/model/StudentName.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_crud_api/student_crud_api/src/main/java/com/springrest/student_crud_api/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_crud_api/student_crud_api/src/main/java/com/springrest/student_crud_api/dao/StudentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_crud_api/student_crud_api/src/main/java/com/springrest/student_crud_api/model/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_crud_api/student_crud_api/src/main/java/com/springrest/student_crud_api/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../student_crud_api/student_crud_api/src/main/java/com/springrest/student_crud_api/service/StudentServiceImplementation.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2GLzvGCVfGFLG76sf4H65ePNYe2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Coditas/Assignments/JAVA/FRAMEWORK/SPRING-BOOT/LDManagement/LDManagement",
+    "settings.editor.selected.configurable": "com.haulmont.jpb.entityDeclaration"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="LdManagementApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.springrest.LDManagement.LdManagementApplication" />
+      <module name="LDManagement" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springrest.LDManagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LdManagementApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5898b70-69ce-4b41-b192-c3b60d37a087" name="Changes" comment="" />
+      <created>1666182882228</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666182882228</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
