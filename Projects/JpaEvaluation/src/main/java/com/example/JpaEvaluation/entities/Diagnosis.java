@@ -26,6 +26,7 @@ public class Diagnosis {
     inverseJoinColumns = @JoinColumn(name = "test_id", referencedColumnName = "testId"))
     private List<Test> testsList;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "diagnosis")
     private  TestResults testResults;
 }
