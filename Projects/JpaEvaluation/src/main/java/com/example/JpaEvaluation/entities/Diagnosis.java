@@ -20,7 +20,7 @@ public class Diagnosis {
     @ManyToOne(cascade = CascadeType.ALL)
     @JsonIgnore
     private Patient patient;
-
+    
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER )
     @JoinTable(joinColumns = @JoinColumn(name = "diagnosis_id", referencedColumnName = "diagnosisId"),
     inverseJoinColumns = @JoinColumn(name = "test_id", referencedColumnName = "testId"))

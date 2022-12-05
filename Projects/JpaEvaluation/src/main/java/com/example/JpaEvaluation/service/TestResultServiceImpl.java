@@ -30,7 +30,7 @@ public class TestResultServiceImpl implements TestResultService{
     TestRepository testRepository;
 
     @Override
-    public TestResults getResults(long diagnosisId) {
+    public TestResults getResults(Long diagnosisId) {
         Diagnosis diagnosis = diagnosisRepository.findById(diagnosisId).orElse(null);
         if(diagnosis!= null){
             return testResultRepository.findByDiagnosis(diagnosis);

@@ -43,14 +43,15 @@ public class PatientController {
     }
 
     @GetMapping("/getResult/{diagnosisId}")
-    public ResponseEntity getResults(Long diagnosisId){
+    public ResponseEntity getResults(@PathVariable String diagnosisId){
         try{
-            return new ResponseEntity(testResultService.getResults(diagnosisId), HttpStatus.OK);
+            return new ResponseEntity(testResultService.getResults(Long.parseLong(diagnosisId)), HttpStatus.OK);
         }catch (Exception e){
             e.printStackTrace();
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
 
     @PostMapping("/registerPatient")
     public ResponseEntity registerPatient(@RequestBody Patient patient){

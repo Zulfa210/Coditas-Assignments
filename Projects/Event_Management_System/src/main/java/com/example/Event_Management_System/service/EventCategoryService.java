@@ -12,6 +12,8 @@ public interface EventCategoryService {
     public List<EventCategory> getAllEventCategories();
     public EventCategory insertEventCategory(EventCategory eventCategory);
     public EventCategory updateEventCategory(EventCategory eventCategory);
-    public void deleteEventCategory(long categoryId);
+    public EventCategory deleteEventCategory(long categoryId);
+
+    public EventCategory getEventCategoryById(long eventId);
 
 }

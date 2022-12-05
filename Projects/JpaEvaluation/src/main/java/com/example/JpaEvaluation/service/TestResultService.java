@@ -8,7 +8,7 @@ import com.example.JpaEvaluation.model.dto.TestResultDto;
  */
 public interface TestResultService {
 
-    public TestResults getResults(long diagnosisId);
+    public TestResults getResults(Long diagnosisId);
 
     public TestResults addResult(TestResultDto testResultDto);
 }

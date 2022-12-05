@@ -3,7 +3,7 @@ package com.springrest.LDManagement.controller;
 
 import com.springrest.LDManagement.entities.Feedback;
 import com.springrest.LDManagement.entities.Trainer;
-import com.springrest.LDManagement.service.FeedbackRepositoryImplementation;
+import com.springrest.LDManagement.service.FeedbackServiceImplementation;
 import com.springrest.LDManagement.service.TrainerRepositoryImplementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -37,7 +37,7 @@ public class TrainerController {
     }
 
     @Autowired
-    FeedbackRepositoryImplementation feedbackRepositoryImplementation;
+    FeedbackServiceImplementation feedbackServiceImplementation;
 
     //**************************************************************************//
     //Get FeedBack
@@ -45,7 +45,7 @@ public class TrainerController {
     @GetMapping("/getFeedback/{trainerId}")
     public ResponseEntity getFeedback(@PathVariable String trainerId) {
         try {
-            List<Feedback> trainers = feedbackRepositoryImplementation.getTrainerFeedback(Long.parseLong(trainerId));
+            List<Feedback> trainers = feedbackServiceImplementation.getTrainerFeedback(Long.parseLong(trainerId));
             if (trainers != null) {
                 return new ResponseEntity(trainers, HttpStatus.OK);
             }
@@ -61,7 +61,7 @@ public class TrainerController {
     @GetMapping("/getFeedbackRating/{trainerId}")
     public ResponseEntity getFeedbackRating(@PathVariable String trainerId) {
         try {
-            return new ResponseEntity(feedbackRepositoryImplementation.getTrainerFeedbackAverage(Long.parseLong(trainerId)), HttpStatus.OK);
+            return new ResponseEntity(feedbackServiceImplementation.getTrainerFeedbackAverage(Long.parseLong(trainerId)), HttpStatus.OK);
         }
         catch (Exception exception) {
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);

@@ -18,10 +18,10 @@ public class Student {
     @Column(nullable = false, unique = true)
     private String studentEmail;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "student_domain", nullable = false)
+    @JoinColumn(name = "student_domain")
     private Domain studentDomain;
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "student_trainer", nullable = false)
+    @JoinColumn(name = "student_trainer")
     @JsonIgnore
     private Trainer studentTrainer;
     @ColumnDefault(value = "false")
@@ -73,5 +73,26 @@ public class Student {
 
     public void setDeleted(boolean deleted) {
         isDeleted = deleted;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", studentName='" + studentName + '\'' +
+                ", studentEmail='" + studentEmail + '\'' +
+                ", isDeleted=" + isDeleted +
+                '}';
+    }
+
+    public Student(Long studentId, String studentName, String studentEmail, Trainer studentTrainer, boolean isDeleted) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.studentEmail = studentEmail;
+        this.studentTrainer = studentTrainer;
+        this.isDeleted = isDeleted;
+    }
+
+    public Student() {
     }
 }

@@ -40,4 +40,14 @@ public class EventOrganizer {
     private boolean isDeleted;
 
     private String role;
+
+    public EventOrganizer(long eventOrganizerId, String eventOrganizerName, String eventOrganizerEmail, long eventOrganizerPhone, boolean isDeleted, String role) {
+        this.eventOrganizerId = eventOrganizerId;
+        this.eventOrganizerName = eventOrganizerName;
+        this.eventOrganizerEmail = eventOrganizerEmail;
+        this.eventOrganizerPhone = eventOrganizerPhone;
+        this.isDeleted = isDeleted;
+        this.role = role;
+    }
+    public EventOrganizer(){}
 }

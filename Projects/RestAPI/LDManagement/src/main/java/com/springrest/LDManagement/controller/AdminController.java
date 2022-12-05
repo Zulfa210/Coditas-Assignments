@@ -76,12 +76,12 @@ public class AdminController {
     //Student Operations
 
     @Autowired
-    StudentRepositoryImplementation studentRepositoryImplementation;
+    StudentServiceImplementation studentServiceImplementation;
 
     @PostMapping("/addStudent")
     public ResponseEntity addStudent(@RequestBody StudentDto studentDto) {
         try {
-            return new ResponseEntity(Optional.of(studentRepositoryImplementation.addStudent(studentDto)), HttpStatus.OK);
+            return new ResponseEntity(Optional.of(studentServiceImplementation.addStudent(studentDto)), HttpStatus.OK);
         }
         catch (Exception exception) {
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -91,7 +91,7 @@ public class AdminController {
     @DeleteMapping("/deleteStudent/{studentId}")
     public ResponseEntity deleteStudent(@PathVariable String studentId) {
         try {
-            Student student = studentRepositoryImplementation.deleteStudent(Long.parseLong(studentId));
+            Student student = studentServiceImplementation.deleteStudent(Long.parseLong(studentId));
             if (student != null) {
                 return new ResponseEntity(student, HttpStatus.OK);
             }
@@ -107,7 +107,7 @@ public class AdminController {
     @GetMapping("/getStudents")
     public ResponseEntity getStudents() {
         try {
-            List<Student> students = studentRepositoryImplementation.getStudents();
+            List<Student> students = studentServiceImplementation.getStudents();
             if (students.size() > 0) {
                 return new ResponseEntity(students, HttpStatus.OK);
             }
@@ -123,7 +123,7 @@ public class AdminController {
     @PutMapping("/updateStudent")
     public ResponseEntity updateStudent(@RequestBody StudentDto studentDto) {
         try {
-            return new ResponseEntity(studentRepositoryImplementation.updateStudent(studentDto), HttpStatus.OK);
+            return new ResponseEntity(studentServiceImplementation.updateStudent(studentDto), HttpStatus.OK);
         }
         catch (Exception exception) {
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -134,12 +134,12 @@ public class AdminController {
     //Feedback
 
     @Autowired
-    FeedbackRepositoryImplementation feedbackRepositoryImplementation;
+    FeedbackServiceImplementation feedbackServiceImplementation;
 
     @GetMapping("/getFeedback")
     public ResponseEntity getFeedback() {
         try {
-            List<Feedback> feedbacks = feedbackRepositoryImplementation.getAllFeedback();
+            List<Feedback> feedbacks = feedbackServiceImplementation.getAllFeedback();
             if (feedbacks.size() > 0) {
                 return new ResponseEntity(feedbacks, HttpStatus.OK);
             }
@@ -156,12 +156,12 @@ public class AdminController {
     //Get Domains
 
     @Autowired
-    DomainRepositoryImplementation domainRepositoryImplementation;
+    DomainServiceImplementation domainServiceImplementation;
 
     @GetMapping("/getDomains")
     public ResponseEntity getDomains() {
         try {
-            List<Domain> domains = domainRepositoryImplementation.getDomains();
+            List<Domain> domains = domainServiceImplementation.getDomains();
             if (domains.size() > 0) {
                 return new ResponseEntity(domains, HttpStatus.OK);
             }
@@ -177,7 +177,7 @@ public class AdminController {
     @GetMapping("/getAllDomains")
     public ResponseEntity getAllDomains() {
         try {
-            List<Domain> domains = domainRepositoryImplementation.getAllDomains();
+            List<Domain> domains = domainServiceImplementation.getAllDomains();
             if (domains.size() > 0) {
                 return new ResponseEntity(domains, HttpStatus.OK);
             }
@@ -193,7 +193,7 @@ public class AdminController {
     @GetMapping("/getAssignedDomains")
     public ResponseEntity getAssignedDomains() {
         try {
-            List<Domain> domains = domainRepositoryImplementation.getAssignedDomains();
+            List<Domain> domains = domainServiceImplementation.getAssignedDomains();
             if (domains.size() > 0) {
                 return new ResponseEntity(domains, HttpStatus.OK);
             }
@@ -210,12 +210,12 @@ public class AdminController {
     //Get Employments
 
     @Autowired
-    EmploymentTypeRepositoryImplementation employmentTypeRepositoryImplementation;
+    EmploymentTypeServiceImplementation employmentTypeServiceImplementation;
 
     @GetMapping("/getEmploymentType")
     public ResponseEntity getEmploymentType() {
         try {
-            List<EmploymentType> employmentTypes = employmentTypeRepositoryImplementation.getEmploymentType();
+            List<EmploymentType> employmentTypes = employmentTypeServiceImplementation.getEmploymentType();
             if (employmentTypes.size() > 0) {
                 return new ResponseEntity(employmentTypes, HttpStatus.OK);
             }
@@ -256,7 +256,7 @@ public class AdminController {
     @GetMapping("/getFeedback/{trainerId}")
     public ResponseEntity getFeedback(@PathVariable String trainerId) {
         try {
-            List<Feedback> trainers = feedbackRepositoryImplementation.getTrainerFeedback(Long.parseLong(trainerId));
+            List<Feedback> trainers = feedbackServiceImplementation.getTrainerFeedback(Long.parseLong(trainerId));
             if (trainers != null) {
                 return new ResponseEntity(trainers, HttpStatus.OK);
             }

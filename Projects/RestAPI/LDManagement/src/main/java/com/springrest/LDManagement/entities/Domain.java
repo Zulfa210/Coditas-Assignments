@@ -1,6 +1,8 @@
 package com.springrest.LDManagement.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
@@ -8,8 +10,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@NoArgsConstructor
 @Table(name = "domain_details")
 public class Domain {
+
+    public Domain(Long domainId, String domainName, boolean isAssigned) {
+        this.domainId = domainId;
+        this.domainName = domainName;
+        this.isAssigned = isAssigned;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

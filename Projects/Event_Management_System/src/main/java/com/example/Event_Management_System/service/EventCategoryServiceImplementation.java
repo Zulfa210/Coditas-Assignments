@@ -32,7 +32,7 @@ public class EventCategoryServiceImplementation implements EventCategoryService{
 
         EventCategory existingCategory = eventCategoryRepository.findById(eventCategory.getCategoryId()).orElse(null);
 
-        if(existingCategory != null) {
+        if(existingCategory != null){
             existingCategory.setCategoryName(eventCategory.getCategoryName());
             //existingCategory.setEvents(eventCategory.getEvents());
         }
@@ -41,9 +41,24 @@ public class EventCategoryServiceImplementation implements EventCategoryService{
     }
 
     @Override
-    public void deleteEventCategory(long categoryId) {
+    public EventCategory deleteEventCategory(long categoryId) {
         EventCategory category = eventCategoryRepository.findById(categoryId).orElse(null);
         category.setDeleted(true);
-        eventCategoryRepository.save(category);
+         return eventCategoryRepository.save(category);
+    }
+
+    @Override
+    public EventCategory getEventCategoryById(long eventId) {
+        List<EventCategory> eventCategories = eventCategoryRepository.findAll();
+
+        EventCategory eventCategory = null;
+
+        for(EventCategory eventCategory1: eventCategories){
+            if(eventCategory1.getCategoryId() == eventId){
+                eventCategory = eventCategory1;
+            }
+
+        }
+        return eventCategory;
     }
 }

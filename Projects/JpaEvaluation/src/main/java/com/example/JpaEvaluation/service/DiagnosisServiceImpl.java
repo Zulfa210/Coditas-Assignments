@@ -43,32 +43,32 @@ public class DiagnosisServiceImpl implements DiagnosisService{
          List<Test> availableTests = testRepository.findAll();
 
          String[] testParameters = {"BMI", "heart_beat", "Spo2", "Blood_Pressure"}  ;
-         for(String testParameter: testParameters) {
+
              for (Test test : availableTests) {
-                 if (test.getTestParameter().equalsIgnoreCase(testParameter)) {
+                 if (test.getTestParameter().equalsIgnoreCase("BMI")) {
                      if (patientBmi > test.getTestMaxValue() || patientBmi < test.getTestMinValue()) {
                          tests.add(test);
                      }
                  }
-                 if (test.getTestParameter().equalsIgnoreCase(testParameter)) {
+                 if (test.getTestParameter().equalsIgnoreCase("heart_beat")) {
                      if (patientHeartBeat > test.getTestMaxValue() || patientHeartBeat < test.getTestMinValue()) {
                          tests.add(test);
                      }
                  }
-                 if (test.getTestParameter().equalsIgnoreCase(testParameter)) {
+                 if (test.getTestParameter().equalsIgnoreCase("Spo2")) {
                      if (patientSpo2 > test.getTestMaxValue() || patientSpo2 < test.getTestMinValue()) {
                          tests.add(test);
                      }
                  }
-                 if (test.getTestParameter().equalsIgnoreCase(testParameter)) {
+                 if (test.getTestParameter().equalsIgnoreCase("Blood_Pressure")) {
                      if (patientBloodPressure > test.getTestMaxValue() || patientBloodPressure < test.getTestMinValue()) {
                          tests.add(test);
                      }
                  }
              }
-         }
 
-diagnosis.setTestsList(tests);
+
+            diagnosis.setTestsList(tests);
         return diagnosisRepository.save(diagnosis);
     }
 }

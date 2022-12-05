@@ -53,10 +53,26 @@ public class AdminController {
         }
     }
 
+    @GetMapping("/getEventCategoryById")
+    public ResponseEntity<EventCategory> getEventCategoryById(@RequestParam(value ="categoryId") Long categoryId) {
+        try {
+            EventCategory eventCategory = eventCategoryService.getEventCategoryById(categoryId);
+
+            if(eventCategory == null) {
+                return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+            } else {
+                return new ResponseEntity<>(eventCategory, HttpStatus.FOUND);
+            }
+        } catch (Exception exception) {
+            System.out.println(exception);
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
     @PostMapping("/insertEventCategory")
     public ResponseEntity insertEventCategory(@RequestBody EventCategory eventCategory){
         try{
-            return new ResponseEntity(Optional.of(eventCategoryService.insertEventCategory(eventCategory)), HttpStatus.OK);
+            return new ResponseEntity(eventCategoryService.insertEventCategory(eventCategory), HttpStatus.CREATED);
         }catch (Exception e){
             e.printStackTrace();
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -77,8 +93,7 @@ public class AdminController {
     @DeleteMapping("/deleteEventCategory/{eventCategoryId}")
     public ResponseEntity deleteEventCategory(@PathVariable long eventCategoryId){
         try{
-            eventCategoryService.deleteEventCategory(eventCategoryId);
-            return new ResponseEntity(HttpStatus.OK);
+            return new ResponseEntity(eventCategoryService.deleteEventCategory(eventCategoryId),HttpStatus.OK);
         }catch (Exception e){
             e.printStackTrace();
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);

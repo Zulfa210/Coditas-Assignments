@@ -2,6 +2,7 @@ package com.example.Event_Management_System.service;
 
 import com.example.Event_Management_System.entities.Event;
 import com.example.Event_Management_System.model.dto.EventDto;
+import org.springframework.stereotype.Service;
 
 import java.sql.Date;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 /**
  * @author Zulfa Attar
  */
+@Service
 public interface EventService {
 
 public List<Event> getAllEvents();

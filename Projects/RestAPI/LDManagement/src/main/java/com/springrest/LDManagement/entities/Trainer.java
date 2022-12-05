@@ -96,4 +96,15 @@ public class Trainer {
     public void setDeleted(boolean deleted) {
         isDeleted = deleted;
     }
+
+    public Trainer(Long trainerId, String trainerName, String trainerEmail, float trainerSalary, boolean isDeleted) {
+        this.trainerId = trainerId;
+        this.trainerName = trainerName;
+        this.trainerEmail = trainerEmail;
+        this.trainerSalary = trainerSalary;
+        this.isDeleted = isDeleted;
+    }
+
+    public Trainer() {
+    }
 }

@@ -3,7 +3,6 @@ package com.example.toolManagement.model;
 /**
  * @author Zulfa Attar
  */
-
 import com.example.toolManagement.entities.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

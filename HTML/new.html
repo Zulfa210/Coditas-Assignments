@@ -17,9 +17,13 @@
         $(document).ready(function(){
             // $("#click").click(function(){
            var req=new XMLHttpRequest();
-           req.open("GET"," http://localhost:8080/admin/getTools",true);
-          //  req.setRequestHeader("ngrok-skip-browser-warning", "1234");
-           req.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGV2ZSIsImV4cCI6MTY2NjAwNzY3MywiaWF0IjoxNjY1OTg5NjczfQ.B48FuCaNwjrLCEH_lopXDlKN3fsoHFIWuJ_XtQd4Rn-H1cLgXo1eZ7orFehEt69j2XN44RG6fTqnkVwR4-Yz1w")
+           req.open("GET","https://7c33-103-176-135-84.in.ngrok.io/admin/getTrainers",true);
+           req.setRequestHeader("ngrok-skip-browser-warning", "1234");
+           req.setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEyMyIsImV4cCI6MTY2NjI2NjA0OSwiaWF0IjoxNjY2MjQ4MDQ5fQ.hqnFoZhG7YIJROxTBnGIj0VuFoVe_SD-1Tbl-MOgsHjJaNeWjjylWWFMXFZ70zneyYI8XMAYsYhaIGFeUGoWlQ")
+          //  req.setRequestHeader("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTONS");
+            // req.setRequestHeader("Access-Control-Allow-Origin","*");
+          //  req.setRequestHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Methods, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers")
+      
            req.send();
            req.onreadystatechange= function(){
                 if(req.readyState==4 && req.status==200)

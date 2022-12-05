@@ -12,7 +12,6 @@ public class random {
         Random random = new Random();
 
         String s = "";
-
         for(int i = 0; i<12; i++){
             s = s+Integer.toString(random.nextInt(10));
         }
@@ -20,20 +19,8 @@ public class random {
         //System.out.println(x);
 
         double a =  (10/0.0);
-        System.out.println(a);
+        System.out.println(x);
 
         List<Integer> list = new ArrayList<>();
-    }
-}
-
-interface a{
-    default void dho(){
-
-    }
-}
-
-interface b{
-    default void dho(){
-
     }
 }

@@ -1,7 +1,9 @@
 package com.example.Event_Management_System.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
@@ -11,6 +13,8 @@ import java.util.List;
 /**
  * @author Zulfa Attar
  */
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 @Entity
 @Table(name = "event_details")
@@ -65,9 +69,25 @@ public class Event {
     private boolean isDeleted;
 
     @Column(name = "rating")
-    @ColumnDefault("0.0f")
-    private float averageFeedbackRating;
+    private float averageFeedbackRating = 0.0f;
 
+    public Event(long eventId,
+                 String eventName,
+                 String eventVenue,
+                 String eventCity,
+                 int eventVenueCapacity,
+                 float eventBasePrice,
+                 float pricePerPerson,
+                 boolean isDeleted) {
+        this.eventId = eventId;
+        this.eventName = eventName;
+        this.eventVenue = eventVenue;
+        this.eventCity = eventCity;
+        this.eventVenueCapacity = eventVenueCapacity;
+        this.eventBasePrice = eventBasePrice;
+        this.pricePerPerson = pricePerPerson;
+        this.isDeleted = isDeleted;
+    }
 }
 
 
