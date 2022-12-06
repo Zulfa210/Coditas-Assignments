@@ -1,6 +1,8 @@
 package com.example.Event_Management_System.model.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.sql.Date;
 import java.sql.Time;
@@ -9,6 +11,8 @@ import java.sql.Time;
  * @author Zulfa Attar
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class EventBookingDto {
 
     private Long bookingId;

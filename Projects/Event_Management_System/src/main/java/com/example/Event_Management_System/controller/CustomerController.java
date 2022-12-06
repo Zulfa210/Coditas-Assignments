@@ -44,6 +44,7 @@ public class CustomerController {
             return new ResponseEntity<>(Optional.of(eventBookingService.addEventBooking(bookingDto)), HttpStatus.CREATED);
 
         } catch (Exception e) {
+            e.printStackTrace();
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -98,6 +99,7 @@ public class CustomerController {
         try {
             return new ResponseEntity(Optional.of(eventService.filterByCategory(eventCategoryName)), HttpStatus.OK);
         } catch (Exception e) {
+            e.printStackTrace();
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -112,7 +114,7 @@ public class CustomerController {
     }
 
     @GetMapping("/getEvents")
-    public ResponseEntity getBookingsByEventOrganiser() {
+    public ResponseEntity getAllEvents() {
         try {
             List<Event> events = eventService.getAllEvents();
 

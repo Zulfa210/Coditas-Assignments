@@ -107,8 +107,8 @@ public class EventServiceImplementation implements EventService{
     @Override
     public List<Event> filterByCategory(String eventCategoryName) {
         EventCategory eventCategory = eventCategoryRepository.findByCategoryName(eventCategoryName).orElse(null);
-        return eventRepository.findAll().stream().filter(event -> (event.getEventCategory().equals(eventCategory))).collect(Collectors.toList());
-
+        //return eventRepository.findAll().stream().filter(event -> (event.getEventCategory().equals(eventCategory))).collect(Collectors.toList());
+        return eventCategory.getEvents();
 
     }
 
